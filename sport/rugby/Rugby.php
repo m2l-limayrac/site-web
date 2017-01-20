@@ -33,6 +33,7 @@
 							</ul>
 						</li>
 						<li><a href="Volley.html">Volley</a></li>
+						<li><a href="login-rugby.php">Connexion</a></li>
 					</ul>
 				</nav>
 			</div>
