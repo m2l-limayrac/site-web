@@ -1,3 +1,37 @@
+<?php
+if(isset($_POST['connexion'])) 
+{   
+            $pseudo = htmlentities($_POST['username'], ENT_QUOTES, "ISO-8859-1"); 
+            $MotDePasse = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1");
+            // connexion BD
+            $mysqli = mysqli_connect("localhost","root","","m2l");
+            //vérification connexion 
+            if(!$mysqli)
+            {
+                echo "Erreur de connexion à la base de données.";
+            } 
+            else 
+            {
+                // requete SQL
+                $Requete = mysqli_query($mysqli,"SELECT * FROM user WHERE pseudo = '".$pseudo."' AND mdp = '".$MotDePasse."'");
+                //on est senser avoir 1 sin on a 1 alors c qu'on a un resultat
+                    if(mysqli_num_rows($Requete) == 0) // si pas de valeur dans la DB
+                    {
+                    
+                      echo "<script>alert(\"Pas connecter\")</script>"; 
+
+                    }   
+                    else 
+                    {
+                    
+                        header ('location : Rugby.php');
+                        echo "connecter";
+
+                    }
+            }    
+}
+?>
+
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
@@ -32,12 +66,12 @@
                 <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
             </div>
             <br></br>
-            <button type="submit" class="button alt">Connexion à la ligue de rugby</button>
+            <button type="submit" class="button alt" name="connexion">Connexion à la ligue de rugby</button>
         </form>
     <br> </br>
     <div>
         <p>Vous souhaitez vous inscrire ? <a href="register-rugby.php">Cliquez ici.</a></p>
     </div>
     </center>
-
 </div>
+
