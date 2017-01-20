@@ -12,7 +12,7 @@
 			<!-- Navbar -->
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Accueil</a></li>
+						<li class="current"><a href="index.php">Accueil</a></li>
 						<li>
 							<a href="#">Maison des Ligue</a>
 							<ul>
@@ -24,9 +24,14 @@
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</li>
+<<<<<<< HEAD
 						<li><a href="Rugby.html">Rugby à XV</a></li>
 						<li><a href="Volley.html">Volley</a></li>
 
+=======
+						<li><a href="Rugby.php">Rugby à XV</a></li>
+						<li><a href="Volley.php">Volley</a></li>
+>>>>>>> 7777d787c200ed69e6eacaa6f070a0c370997027
 					</ul>
 				</nav>
 			</div>
