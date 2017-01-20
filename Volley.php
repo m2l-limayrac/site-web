@@ -1,12 +1,7 @@
 <!DOCTYPE HTML> 
 <html lang="fr">
 	<head>
-		<title>Volley-ball </title>
-		<link rel="icon" type="image/png" href="images/iconeP.png"/>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/css_custom.css" />
+		<?php include './includes/header.php'; ?>
 	</head>
 	<body>
 		<div id="page-wrapper">

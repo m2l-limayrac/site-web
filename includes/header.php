@@ -1,6 +1,16 @@
 <?php 
-	if (basename($_SERVER['PHP_SELF'] == "index.php")) {
+	if (basename($_SERVER['PHP_SELF']) == "index.php") {
 		echo "<title>Maison des ligues - M2L</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "Rugby.php") {
+		echo "<title>Ligue de Rugby</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "Volley.php") {
+		echo "<title>Ligue de Volley</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "Register.php") {
+		echo "<title>Inscription</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "login-Rugby.php") {
+		echo "<title>login-Rugby</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "login-Volley.php") {
+		echo "<title>login-Volley</title>";
 	}
  ?>
 

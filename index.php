@@ -4,6 +4,7 @@
 		<?php include './includes/header.php'; ?>
 	</head>
 	<body>
+	<?php echo basename($_SERVER['PHP_SELF']); ?>
 		<div id="page-wrapper">
 			<!-- Header -->
 			<div id="header">
@@ -24,14 +25,11 @@
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</li>
-<<<<<<< HEAD
-						<li><a href="Rugby.html">Rugby à XV</a></li>
-						<li><a href="Volley.html">Volley</a></li>
-
-=======
 						<li><a href="Rugby.php">Rugby à XV</a></li>
 						<li><a href="Volley.php">Volley</a></li>
->>>>>>> 7777d787c200ed69e6eacaa6f070a0c370997027
+						<li><a href="Rugby.php">Rugby à XV</a></li>
+						<li><a href="Volley.php">Volley</a></li>
+
 					</ul>
 				</nav>
 			</div>

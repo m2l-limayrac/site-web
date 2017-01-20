@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <?php include './includes/header.php'; ?>
     </head>
 
     <div id="page-wrapper">
