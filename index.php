@@ -4,7 +4,6 @@
 		<?php include './includes/header.php'; ?>
 	</head>
 	<body>
-	<?php echo basename($_SERVER['PHP_SELF']); ?>
 		<div id="page-wrapper">
 			<!-- Header -->
 			<div id="header">
@@ -27,9 +26,6 @@
 						</li>
 						<li><a href="Rugby.php">Rugby à XV</a></li>
 						<li><a href="Volley.php">Volley</a></li>
-						<li><a href="Rugby.php">Rugby à XV</a></li>
-						<li><a href="Volley.php">Volley</a></li>
-
 					</ul>
 				</nav>
 			</div>
