@@ -17,9 +17,9 @@
 			<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Accueil</a></li>
+						<li><a href="index.php">Accueil</a></li>
 						<li class="current">
-							<a href="Rugby.html">Rugby à XV</a>
+							<a href="Rugby.php">Rugby à XV</a>
 							<ul>
 								<li><a href="#Prés-Rugby">Présentation du Rugby</a></li>
 								<li><a href="#Historique">Historique</a></li>
@@ -32,7 +32,8 @@
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</li>
-						<li><a href="Volley.html">Volley</a></li>
+						<li><a href="Volley.php">Volley</a></li>
+						<li><a href="login-rugby.php">Connexion</a></li>
 					</ul>
 				</nav>
 			</div>

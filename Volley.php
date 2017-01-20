@@ -17,10 +17,10 @@
 			<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Accueil</a></li>
-						<li><a href="Rugby.html">Rugby à XV</a></li>
+						<li><a href="index.php">Accueil</a></li>
+						<li><a href="Rugby.php">Rugby à XV</a></li>
 						<li class="current">
-							<a href="Volley.html">Volley</a>
+							<a href="Volley.php">Volley</a>
 							<ul>
 								<li><a href="#Prés-Volley">Présentation du Volley</a></li>
 								<li><a href="#Historique">Histoire du sport</a></li>
