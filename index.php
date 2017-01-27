@@ -6,29 +6,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- Header -->
-			<div id="header">
-			<!-- Logo -->
-				<h1><a id="logo">M2L <em>Maison des ligues</em></a></h1>
-			<!-- Navbar -->
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.php">Accueil</a></li>
-						<li>
-							<a href="#">Maison des Ligue</a>
-							<ul>
-								<li><a href="#ligue">Ligue</a></li>
-								<li><a href="#mission">Mission</a></li>
-								<li><a href="#correspondance">Correspondance des bureaux et des ligues</a></li>
-								<li><a href="#financement">Financement</a></li>
-								<li><a href="#service">Services proposés</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</li>
-						<li><a href="Rugby.php">Rugby à XV</a></li>
-						<li><a href="Volley.php">Volley</a></li>
-					</ul>
-				</nav>
-			</div>
+			<?php include './includes/head.php'; ?>
 			<!-- Banner -->
 			<div>
 				<section id="banner" class="mainBanner">

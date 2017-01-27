@@ -4,53 +4,41 @@
         <?php include './includes/header.php'; ?>         
     </head>
 <div class="container">
-<center>
-    <h2>Inscription</h2>
-    
-    <div >    
-        <br />
-       
-        <form method="POST" action="Register.php">
-            <div >
-                <label for="exampleInputEmail1">Saisissez un pseudo</label>
-
-                <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
-            </div>
-           
-          <div >
-                <label for="Mot de Passe">Saisissez un mot de passe</label>
-                <input type="password" class="form-control" name="mdp" id="mdp" placeholder="Mot de passe" required>
-            </div>
-           
-    
-            <label for="choix de ligue">Choix de la Ligue</label>
+<body>
+    <center>
+        <h2>Inscription</h2>
+        <div>    
+            <br/>
+            <form method="POST" action="Register.php">
+                <div >
+                    <label for="exampleInputEmail1">Saisissez un pseudo</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
+                </div>
+                <div>
+                    <label for="Mot de Passe">Saisissez un mot de passe</label>
+                    <input type="password" class="form-control" name="mdp" id="mdp" placeholder="Mot de passe" required>
+                </div>    
+                <label for="choix de ligue">Choix de la Ligue</label>
                 <span class="custom-dropdown custom-dropdown--white">
                     <select name="choixLigue" class="custom-dropdown__select custom-dropdown__select--white">
                         <option value="Rugby" >Ligue de Rugby</option>
                         <option value="volley"> Ligue de volley</option>       
                     </select>
                 </span>
-            </label>
-            <br></br>
-            
-            <div >
-                <label for="exampleInputEmail1">Saisissez un votre adresse Mail</label>
-                <input type="email" class="form-control" name="Mail" id="Mail" placeholder="Mail" required>
-            </div>
-            <br></br>
-          
-            <button type="submit" class="button alt">Inscription</button>
-        </form>
-    </div>
-
-    <div class="col-md-3">
-        <p>Vous souhaitez vous Connectez?<a href="login-volley.php">Cliquez ici.</a></p>
-    </div>
-</center>
-</div>
-
-
-
+                <br></br>
+                <div >
+                    <label for="exampleInputEmail1">Saisissez un votre adresse Mail</label>
+                    <input type="email" class="form-control" name="Mail" id="Mail" placeholder="Mail" required>
+                </div>
+                <br></br>
+                <button type="submit" class="button alt">Inscription</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <p>Vous souhaitez vous Connectez?<a href="login-volley.php">Cliquez ici.</a></p>
+        </div>
+    </center>
+</body>
 <?php 
 
 $bdd = mysqli_connect("localhost","root","","m2l")or die ("erreur de co");

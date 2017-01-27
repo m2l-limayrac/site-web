@@ -41,19 +41,7 @@ if(isset($_POST['connexion']))
     <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <div id="header">
-            <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue de Volley</em></a></h1>
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Rugby.php">Rugby</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
-                        <li class="current"><a href="login-Volley.php">Connexion</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue de Volley</h2>

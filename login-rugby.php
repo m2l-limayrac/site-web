@@ -40,19 +40,7 @@ if(isset($_POST['connexion']))
         <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <div id="header">
-            <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue de Rugby</em></a></h1>
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
-                        <li><a href="Rugby.php">Rugby</a></li>
-                        <li class="current"><a href="login-rugby.php">Connexion</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue de Rugby</h2>
@@ -70,7 +58,7 @@ if(isset($_POST['connexion']))
                     </form>
                 <br> </br>
                 <div>
-                    <p>Vous souhaitez vous inscrire ? <a href="register-rugby.php">Cliquez ici.</a></p>
+                    <p>Vous souhaitez vous inscrire ? <a href="Register.php">Cliquez ici.</a></p>
                 </div>
             </center>
             <!-- FOOTER -->

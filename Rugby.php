@@ -6,32 +6,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- Header -->
-			<div id="header">
-			<!-- Logo -->
-				<h1><a id="logo">M2L <em>Ligue de Rugby</em></a></h1>
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.php">Accueil</a></li>
-						<li class="current">
-							<a href="Rugby.php">Rugby à XV</a>
-							<ul>
-								<li><a href="#Prés-Rugby">Présentation du Rugby</a></li>
-								<li><a href="#Historique">Historique</a></li>
-								<li><a href="#Règles">Règles</a></li>
-								<li><a href="#Entraineurs">Entraineurs</a></li>
-								<li><a href="#Catégories">Les différente catégories</a></li>
-								<li><a href="#entrainementsL">Lieu d'entrainements</a></li>
-								<li><a href="#entrainementsJ">Jours d'entrainements</a></li>
-								<li><a href="#Calendrier">Le Calendrier des Matchs</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</li>
-						<li><a href="Volley.php">Volley</a></li>
-						<li><a href="login-rugby.php">Connexion</a></li>
-					</ul>
-				</nav>
-			</div>
+			<?php include './includes/head.php'; ?>
 			<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
