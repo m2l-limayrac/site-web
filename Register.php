@@ -44,30 +44,6 @@
 
 <?php 
 
-//$bdd = mysqli_connect("localhost","root","")or die ("erreur de co");
-
-//mysql_select_db("m2l",$bdd)or die("erreur de connexion a la base de donnees");
-
-
-
- //if (isset ($_POST['valider'])){
-
-            //$username = $_POST['username'];
-            //$mdp = $_POST['mdp'];s
-            //$Mail= $_POST['Mail'];
-            //$choixLigue= $_POST['choixLigue'];
-
-    //$sql = 'INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ("'.$username.'","'.$mdp'","'.$Mail.'","'.$choixLigue.'")';
-    //INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ("toto",'1235',"jul@m2l.fr",2);
-
-    //$sql = "INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ("toto",'1235',"jul@m2l.fr",2)";
-
-
-    //}
-
-?>
-<?php 
-
 // on se connecte a Mysql 
 $bdd = mysqli_connect("localhost","root","","m2l");
 // si on ne se connecte pas ou die l'execution
