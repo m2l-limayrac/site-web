@@ -18,15 +18,29 @@ if(isset($_POST['connexion']))
                     if(mysqli_num_rows($Requete) == 0) // si pas de valeur dans la DB
                     {
                     
-                      echo "<script>alert(\"Pas connecter\")</script>"; 
+                      echo "<script>alert(\"Identifiant ou Mot de Passe Incorrect\")</script>"; 
 
                     }   
                     else 
                     {
                     
-                        header ('location : Rugby.php');
-                        echo "connecter";
-
+                        $test = "SELECT id_ligue FROM user WHERE pseudo = '$pseudo'";
+                        $result = mysqli_query($mysqli, $test);
+                        
+                            if (mysqli_num_rows($result) > 0)
+                            {
+                                while ($row = mysqli_fetch_assoc($result)){
+                                    if($row["id_ligue"] == 1)
+                                {
+                                    header('Location: ./Rugby.php');
+                                    exit();
+                                      
+                                }  else 
+                                {
+                                    echo "<script>alert(\"Vous tentez de vous connecter a la mauvaise ligue!!\")</script>";
+                                }
+                                }                                
+                            }
                     }
             }    
 }
@@ -40,7 +54,19 @@ if(isset($_POST['connexion']))
         <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <?php include './includes/head.php'; ?>
+            <div id="header">
+            <!-- Logo -->
+                <h1><a id="logo">M2L <em>Ligue de Rugby</em></a></h1>
+            <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.php">Accueil</a></li>
+                        <li><a href="Volley.php">Volley</a></li>
+                        <li><a href="Rugby.php">Rugby</a></li>
+                        <li class="current"><a href="login-rugby.php">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
             <br></br>
             <center>
                 <h2>Connexion à la ligue de Rugby</h2>
@@ -58,7 +84,7 @@ if(isset($_POST['connexion']))
                     </form>
                 <br> </br>
                 <div>
-                    <p>Vous souhaitez vous inscrire ? <a href="Register.php">Cliquez ici.</a></p>
+                    <p>Vous souhaitez vous inscrire ? <a href="register-rugby.php">Cliquez ici.</a></p>
                 </div>
             </center>
             <!-- FOOTER -->

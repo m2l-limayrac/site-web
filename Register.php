@@ -27,6 +27,7 @@
                         <option value="volley">Ligue de volley</option>       
                     </select>
                 </span>
+
                 <br></br>
                 <div>
                     <label for="exampleInputEmail1">Saisissez un votre adresse Mail</label>
