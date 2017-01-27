@@ -23,8 +23,8 @@
                 <label for="choix de ligue">Choix de la Ligue</label>
                 <span class="custom-dropdown custom-dropdown--white">
                     <select name="choixLigue" class="custom-dropdown__select custom-dropdown__select--white">
-                        <option value="Rugby" >Ligue de Rugby</option>
-                        <option value="volley"> Ligue de volley</option>       
+                        <option value="Rugby">Ligue de Rugby</option>
+                        <option value="volley">Ligue de volley</option>       
                     </select>
                 </span>
                 <br></br>
@@ -60,7 +60,9 @@ else {
             $choix = $_POST['choixLigue'];
             if ($choix == 'Rugby') {
                 $choix = 1;
-            }else{
+            }
+            else if ($choix == 'volley')
+            {
                 $choix = 2;
             }
 
@@ -68,7 +70,7 @@ else {
             $mdp = $_POST['mdp'];
             $Mail = $_POST['Mail'];
 
-            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdp."','".$Mail."',".$choix.")";
+            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdp."','".$Mail."','".$choix."')";
 
             if(mysqli_query($bdd,$sql))
             {
@@ -78,7 +80,18 @@ else {
             {
                 echo "error".$sql."<br>".mysqli_error($bdd);
             }
-        }   
+        }
+           
+        if ($choix == 1 )
+        {
+            header('Location: ./Rugby.php');
+            exit();
+        } 
+        else 
+        {
+            header('Location: ./Volley.php');
+            exit();
+        }  
 
     }
 }
