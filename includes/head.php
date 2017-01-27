@@ -46,7 +46,12 @@
 								</ul>
 							</li>
 							<li><a href="Volley.php">Volley</a></li>
-							<li><a href="login-rugby.php">Connexion</a></li>
+							<li>
+								<a href="login-rugby.php">Connexion</a>
+								<ul>
+									<li><a href="Register.php">Inscription</a></li>
+								</ul>
+							</li>
 						</ul>
 					</nav>
 				</div>';
@@ -73,7 +78,12 @@
 									<li><a href="#contact">Contact</a></li>
 								</ul>
 							</li>
-							<li><a href="login-volley.php">Connexion</a></li>
+							<li>
+								<a href="login-volley.php">Connexion</a>
+								<ul>
+									<li><a href="Register.php">Inscription</a></li>
+								</ul>
+							</li>
 						</ul>
 					</nav>
 				</div>';
@@ -89,7 +99,12 @@
 	                        <li><a href="index.php">Accueil</a></li>
 	                        <li><a href="Rugby.php">Rugby</a></li>
 	                        <li><a href="Volley.php">Volley</a></li>
-	                        <li class="current"><a href="login-rugby.php">Connexion</a></li>
+	                        <li class="current">
+								<a href="login-rugby.php">Connexion</a>
+								<ul>
+									<li><a href="Register.php">Inscription</a></li>
+								</ul>
+							</li>
 	                    </ul>
 	                </nav>
                 </div>';
@@ -103,7 +118,12 @@
 	                        <li><a href="index.php">Accueil</a></li>
 	                        <li><a href="Rugby.php">Rugby</a></li>
 	                        <li><a href="Volley.php">Volley</a></li>
-	                        <li class="current"><a href="login-Volley.php">Connexion</a></li>
+	                        <li class="current">
+								<a href="login-volley.php">Connexion</a>
+								<ul>
+									<li><a href="Register.php">Inscription</a></li>
+								</ul>
+							</li>
 	                    </ul>
 	                </nav>
                 </div>';
