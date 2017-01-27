@@ -6,14 +6,12 @@ table {
 th {
 	font-family: monospace;
 	border: thin solid #fec816;
-	width: 
 	padding: 5px;
 	background-color: rgba(254, 200, 22, 0.31);
 }
 td {
 	font-family: sans-serif;
 	border: thin solid #fec816;
-	width: 
 	padding: 5px;
 	text-align: center;
 	background-color: #ffffff;

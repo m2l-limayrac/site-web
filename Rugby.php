@@ -182,24 +182,8 @@
 					</div>
 				</div>
 			</section>
-			<!-- CTA -->
-			<section id="cta" class="wrapper style3">
-				<div class="container" id="contact">
-					<header>
-						<h2>Coordonnées de la ligue de Rugby à 15</h2>
-					</header>
-				</div>
-			</section>
 			<!-- Footer -->
-			<div id="footer">
-				<!-- Icons -->
-				<ul class="icons">
-					<li><a href="https://www.google.fr/maps/place/13+Rue+Jean+Moulin" class="icon fa-map-marker"><span class="label">Adresse</span><p class="icones">13 rue Jean Moulin 54510 TOMBLAINE</p></a></li>
-					<li><a href="tel:+33383188702" class="icon fa-phone"><span class="label">Téléphone</span><p class="icones">03 83 18 95 61</p></a></li>
-					<li><a class="icon fa-fax"><span class="label">FAX</span><p class="icones">03 83 18 95 62</p></a></li>
-					<li><a href="mailto:lucien.gastaldello@m2l.fr" class="icon fa-at"><span class="label">e-mail</span><p class="icones">3036A@ffr.fr</p></a></li>
-				</ul>
-			</div>
+			<?php include './includes/Footer.php'; ?>
 		</div>
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
