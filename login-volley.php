@@ -33,27 +33,13 @@ if(isset($_POST['connexion']))
 }
 ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
         <?php include './includes/header.php'; ?>
     </head>
-
-    <div id="page-wrapper">
+    <body>
+        <div id="page-wrapper">
             <!-- Header -->
             <div id="header">
             <!-- Logo -->
@@ -62,34 +48,37 @@ if(isset($_POST['connexion']))
                 <nav id="nav">
                     <ul>
                         <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
                         <li><a href="Rugby.php">Rugby</a></li>
+                        <li><a href="Volley.php">Volley</a></li>
+                        <li class="current"><a href="login-Volley.php">Connexion</a></li>
                     </ul>
                 </nav>
-    </div>
-    <br></br>
-    <center>
-    <h2>Connexion à la ligue de Volley</h2>
-
-        <form method="POST" action="login-Volley.php">
-            <div>
-                <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue de Voley</label>
-                <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
-            </div>
-            <div>
-                <label for="exampleInputPassword1">Mot de passe (ligue de Volley)</label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
             </div>
             <br></br>
-            <button type="submit" class="button alt">Connexion à la ligue de Volley</button>
-        </form>
-    <br> </br>
-    <div>
-        <p>Vous souhaitez vous inscrire ? <a href="Register.php">Cliquez ici.</a></p>
-    </div>
-    </center>
-</div>
-
+            <center>
+                <h2>Connexion à la ligue de Volley</h2>
+                    <form method="POST" action="login-Volley.php">
+                        <div>
+                            <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue de Voley</label>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword1">Mot de passe (ligue de Volley)</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
+                        </div>
+                        <br></br>
+                        <button type="submit" class="button alt">Connexion à la ligue de Volley</button>
+                    </form>
+                <br><br>
+                <div>
+                    <p>Vous souhaitez vous inscrire ? <a href="Register.php">Cliquez ici.</a></p>
+                </div>
+            </center>
+        </div>
+        <!-- FOOTER -->
+        <?php include './includes/Footer.php'; ?>
+    </body>
+</html>
 
 
 
