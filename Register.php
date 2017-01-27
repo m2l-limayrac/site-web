@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <?php include './includes/header.php'; ?>         
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/css_custom.css" />
+         
     </head>
 <div class="container">
 <body>
     <center>
         <h2>Inscription</h2>
         <div>    
-            <br/>
+            <br>
             <form method="POST" action="Register.php">
                 <div >
                     <label for="exampleInputEmail1">Saisissez un pseudo</label>
@@ -26,7 +28,7 @@
                     </select>
                 </span>
                 <br></br>
-                <div >
+                <div>
                     <label for="exampleInputEmail1">Saisissez un votre adresse Mail</label>
                     <input type="email" class="form-control" name="Mail" id="Mail" placeholder="Mail" required>
                 </div>
@@ -39,41 +41,69 @@
         </div>
     </center>
 </body>
+
 <?php 
 
-$bdd = mysqli_connect("localhost","root","","m2l")or die ("erreur de co");
-// si on ne se connecte pas ou die l'execution
-if (!$bdd) die('Erreur de connection');
-// on selectionne la base de données
-mysqli_select_db($bdd,'m2l' );
- 
-if  (isset($_POST['submit'])){
+//$bdd = mysqli_connect("localhost","root","")or die ("erreur de co");
 
-if( $_POST && isset($_POST['username']) && isset($_POST['mdp'])&& isset($_POST['choixLigue'])  && $_POST['Mail'] )
-{
-$username = $_POST['title'];
-$mdp = $_POST['mdp'];
-$Mail= $_POST['Mail'];
-$choixLigue= $_POST['choixLigue'];
+//mysql_select_db("m2l",$bdd)or die("erreur de connexion a la base de donnees");
 
 
-// On vérifie si les anti quote sont active sinon on les rajoute
-if(!get_magic_quotes_gpc())
-{
-$username = addslashes($username);
-$mdp = addslashes($mdp);
-$Mail = addslashes($Mail);
-$choixLigue = addslashes($choixLigue);
-}
 
-$sql = mysqli_query($bdd,"INSERT INTO user (pseudo,mdp,choixLigue,mail) VALUES ('".$username."','".$mdp."','".$Mail."','".$choixLigue."', NOW())");
+ //if (isset ($_POST['valider'])){
 
-if (!$sql) 
-throw new Exception( mysqli_error($bdd) );
-// Si aucune erreur on redirige vers la page détail de l'article
+            //$username = $_POST['username'];
+            //$mdp = $_POST['mdp'];s
+            //$Mail= $_POST['Mail'];
+            //$choixLigue= $_POST['choixLigue'];
+
+    //$sql = 'INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ("'.$username.'","'.$mdp'","'.$Mail.'","'.$choixLigue.'")';
+    //INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ("toto",'1235',"jul@m2l.fr",2);
+
+    //$sql = "INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ("toto",'1235',"jul@m2l.fr",2)";
 
 
-}
-// On vérifie les infos qu'on reçoit via un POST
+    //}
 
 ?>
+<?php 
+
+// on se connecte a Mysql 
+$bdd = mysqli_connect("localhost","root","","m2l");
+// si on ne se connecte pas ou die l'execution
+if (!$bdd) {
+   echo 'Erreur de connection';
+}
+else {
+
+    if (isset ($_POST['valider']))
+    {
+
+        if( $_POST && isset($_POST['username']) && isset($_POST['mdp'])&& isset($_POST['Mail']) && $_POST['choixLigue'])
+        {   
+            $choix = $_POST['choixLigue'];
+            if ($choix == 'Rugby') {
+                $choix = 1;
+            }else{
+                $choix = 2;
+            }
+
+            $username= $_POST['username'];
+            $mdp = $_POST['mdp'];
+            $Mail = $_POST['Mail'];
+
+            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdp."','".$Mail."',".$choix.")";
+
+            if(mysqli_query($bdd,$sql))
+            {
+                echo "Success";
+            }
+            else
+            {
+                echo "error".$sql."<br>".mysqli_error($bdd);
+            }
+        }   
+
+    }
+}
+ ?>
