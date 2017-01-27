@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 18 Janvier 2017 à 18:05
+-- Généré le :  Ven 27 Janvier 2017 à 11:08
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -46,6 +46,14 @@ CREATE TABLE `ligue` (
   `lib_lig` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `ligue`
+--
+
+INSERT INTO `ligue` (`id_ligue`, `lib_lig`) VALUES
+(1, 'Rugby'),
+(2, 'Volley');
+
 -- --------------------------------------------------------
 
 --
@@ -61,6 +69,15 @@ CREATE TABLE `user` (
   `id_ligue` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `user`
+--
+
+INSERT INTO `user` (`id_user`, `pseudo`, `mdp`, `mail`, `id_usertype`, `id_ligue`) VALUES
+(1, 'clement', '1234', 'clement@m2l.fr', 3, 1),
+(2, 'Alexis', '1234', 'alexis@m2l.fr', 2, 1),
+(3, 'Julien', '1234', 'julien@m2l.fr', 2, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +89,15 @@ CREATE TABLE `usertype` (
   `lib_usertype` varchar(25) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `usertype`
+--
+
+INSERT INTO `usertype` (`id_usertype`, `lib_usertype`, `description`) VALUES
+(1, 'user', 'simple utilisateur'),
+(2, 'admin', 'contrôle sur son sport'),
+(3, 'SuperAdmin', 'controle sur tous le site');
 
 --
 -- Index pour les tables exportées
@@ -117,17 +143,17 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT pour la table `ligue`
 --
 ALTER TABLE `ligue`
-  MODIFY `id_ligue` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ligue` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `usertype`
 --
 ALTER TABLE `usertype`
-  MODIFY `id_usertype` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usertype` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Contraintes pour les tables exportées
 --

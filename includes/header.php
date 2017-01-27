@@ -7,9 +7,9 @@
 		echo "<title>Ligue de Volley</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "Register.php") {
 		echo "<title>Inscription</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-Rugby.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
 		echo "<title>login-Rugby</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-Volley.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "login-volley.php") {
 		echo "<title>login-Volley</title>";
 	}
  ?>

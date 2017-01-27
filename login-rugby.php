@@ -18,15 +18,29 @@ if(isset($_POST['connexion']))
                     if(mysqli_num_rows($Requete) == 0) // si pas de valeur dans la DB
                     {
                     
-                      echo "<script>alert(\"Pas connecter\")</script>"; 
+                      echo "<script>alert(\"Identifiant ou Mot de Passe Incorrect\")</script>"; 
 
                     }   
                     else 
                     {
                     
-                        header ('location : Rugby.php');
-                        echo "connecter";
-
+                        $test = "SELECT id_ligue FROM user WHERE pseudo = '$pseudo'";
+                        $result = mysqli_query($mysqli, $test);
+                        
+                            if (mysqli_num_rows($result) > 0)
+                            {
+                                while ($row = mysqli_fetch_assoc($result)){
+                                    if($row["id_ligue"] == 1)
+                                {
+                                    header('Location: ./Rugby.php');
+                                    exit();
+                                      
+                                }  else 
+                                {
+                                    echo "<script>alert(\"Vous tentez de vous connecter a la mauvaise ligue!!\")</script>";
+                                }
+                                }                                
+                            }
                     }
             }    
 }

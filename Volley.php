@@ -11,33 +11,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- Header -->
-			<div id="header">
-			<!-- Logo -->
-				<h1><a id="logo">M2L <em>Ligue de Volley</em></a></h1>
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.php">Accueil</a></li>
-						<li><a href="Rugby.php">Rugby à XV</a></li>
-						<li class="current">
-							<a href="Volley.php">Volley</a>
-							<ul>
-								<li><a href="#Prés-Volley">Présentation du Volley</a></li>
-								<li><a href="#Historique">Histoire du sport</a></li>
-								<li><a href="#Règles">Règles du sport</a></li>
-								<li><a href="#Entraineurs">Les entraineurs</a></li>
-								<li><a href="#Catégories">Les catégories</a></li>
-								<li><a href="#entrainementsL">Lieu d'entrainements</a></li>
-								<li><a href="#entrainementsJ">Jours d'entrainements</a></li>
-								<li><a href="#Calendrier">Calendrier des Matchs</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</li>
-						<li><a href="login-volley.php">Connexion</a></li>
-						<li><a href="Register.php">Inscription</a></li>
-					</ul>
-				</nav>
-			</div>
+			<?php include './includes/head.php'; ?>
 			<!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
