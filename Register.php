@@ -50,10 +50,9 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 // si on ne se connecte pas ou die l'execution
 if (!$bdd) {
    echo 'Erreur de connection';
-}
-else {
+}else{
 
-    if (isset ($_POST['valider']))
+    if (isset ($_POST['submit']))
     {
 
         if( $_POST && isset($_POST['username']) && isset($_POST['mdp'])&& isset($_POST['Mail']) && $_POST['choixLigue'])

@@ -117,7 +117,7 @@
 						<div class="row">
 							<section class="6u 12u(narrower)">
 								<div class="box post" id="financement">
-									<a href="#" class="image left"><img src="images/financement.jpg" alt="image financement" /></a>
+									<a class="image left"><img src="images/financement.jpg" alt="image financement" /></a>
 									<div class="inner">
 										<h3>Financement</h3>
 										<p>La M2L est une structure financée par le Conseil Régional de Lorraine dont l'administration est déléguée au Comité Régional Olympique et Sportif de Lorraine (CROSL).</p>
@@ -149,9 +149,9 @@
 		<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="assets/js/unslider.js"></script>
 		<script>
-		$('.carousel').unslider({
-			autoplay: true
-		});
+			$('.carousel').unslider({
+				autoplay: true
+			});
 		</script>
 	</body>
 </html>

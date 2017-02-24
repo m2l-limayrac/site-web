@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 27 Janvier 2017 à 11:08
+-- Généré le :  Ven 24 Février 2017 à 12:26
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -28,12 +28,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `faq` (
   `id_faq` int(11) NOT NULL,
-  `question` varchar(50) DEFAULT NULL,
-  `reponse` varchar(50) DEFAULT NULL,
+  `question` text CHARACTER SET utf8,
+  `reponse` text CHARACTER SET utf8,
   `dat_question` date DEFAULT NULL,
   `dat_reponse` date DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `faq`
+--
+
+INSERT INTO `faq` (`id_faq`, `question`, `reponse`, `dat_question`, `dat_reponse`, `id_user`) VALUES
+(1, 'fhfhfhr', 'rhrhrhrh', '2017-02-01', '2017-02-17', 7),
+(2, 'ouais', 'non', '2017-02-02', '2017-02-17', 8);
 
 -- --------------------------------------------------------
 
@@ -52,7 +60,8 @@ CREATE TABLE `ligue` (
 
 INSERT INTO `ligue` (`id_ligue`, `lib_lig`) VALUES
 (1, 'Rugby'),
-(2, 'Volley');
+(2, 'Volley'),
+(3, 'Escrime');
 
 -- --------------------------------------------------------
 
@@ -62,9 +71,9 @@ INSERT INTO `ligue` (`id_ligue`, `lib_lig`) VALUES
 
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
-  `pseudo` varchar(25) DEFAULT NULL,
-  `mdp` varchar(25) DEFAULT NULL,
-  `mail` varchar(25) DEFAULT NULL,
+  `pseudo` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
+  `mdp` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
+  `mail` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
   `id_usertype` int(11) DEFAULT NULL,
   `id_ligue` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -76,7 +85,21 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `pseudo`, `mdp`, `mail`, `id_usertype`, `id_ligue`) VALUES
 (1, 'clement', '1234', 'clement@m2l.fr', 3, 1),
 (2, 'Alexis', '1234', 'alexis@m2l.fr', 2, 1),
-(3, 'Julien', '1234', 'julien@m2l.fr', 2, 2);
+(3, 'Julien', '1234', 'julien@m2l.fr', 2, 2),
+(4, 'toto', '1235', 'jul@m2l.fr', NULL, 2),
+(5, 'Julien21', '12345', 'julien@m2l.fr', NULL, 2),
+(6, 'jtjtj', 'gtgg', 'tjtj@orangr.fr', NULL, 1),
+(7, 'tjt', 'tjtj', 'tjtj@orangr.fr', NULL, 1),
+(8, 'uuuu', 'uuu', 'ff@gmail.com', NULL, 2),
+(9, 'u(jut', 'jtjtj', 'ff@gmail.com', NULL, 2),
+(10, 'zegeg', 'egegeg', 'tjtj@orangr.fr', NULL, 2),
+(11, 'Xxjulien69xX2000', '12345', 'ff@gmail.com', NULL, 1),
+(12, 'f', 'ggg', 'rhrh@ezgzeg', NULL, 2),
+(13, '(u(', '(u(u(u', 'ff@gmail.com', NULL, 2),
+(14, 'tyjutj', 'tjtj', 'rhrh@ezgzeg', NULL, 2),
+(15, 'tyjutj', 'tjtj', 'rhrh@ezgzeg', NULL, 2),
+(16, '(u(u', '(u(u', 'uiui@orange.fr', NULL, 2),
+(17, 'jju', 'judhh', 'uiui@orange.fr', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -138,17 +161,17 @@ ALTER TABLE `usertype`
 -- AUTO_INCREMENT pour la table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `ligue`
 --
 ALTER TABLE `ligue`
-  MODIFY `id_ligue` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_ligue` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pour la table `usertype`
 --

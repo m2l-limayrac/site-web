@@ -32,6 +32,9 @@ if(isset($_POST['connexion']))
                                 while ($row = mysqli_fetch_assoc($result)){
                                     if($row["id_ligue"] == 1)
                                 {
+                                    session_start();
+                                    $_SESSION['login'] = $pseudo;
+                                    $_SESSION['ligue'] = $row["id_ligue"];
                                     header('Location: ./Rugby.php');
                                     exit();
                                       
