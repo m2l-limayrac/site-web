@@ -19,7 +19,6 @@ if(isset($_POST['connexion']))
                     {
                     
                       echo "<script>alert(\"Identifiant ou Mot de Passe Incorrect\")</script>"; 
-
                     }   
                     else 
                     {
@@ -49,7 +48,6 @@ if(isset($_POST['connexion']))
             }    
 }
 ?>
-
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
