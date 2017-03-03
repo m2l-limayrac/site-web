@@ -23,6 +23,7 @@
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="Volley.php">Volley</a></li>
                         <li><a href="Rugby.php">Rugby</a></li>
+                        <li><a href="Escrime.php">Escrime</a></li>
                         <li class="current"><a href="login-rugby.php">Connexion</a></li>
                     </ul>
                 </nav>

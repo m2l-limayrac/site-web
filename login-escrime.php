@@ -16,7 +16,7 @@
             <!-- Header -->
             <div id="header">
             <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue de Volley</em></a></h1>
+                <h1><a id="logo">M2L <em>Ligue d'Escrime</em></a></h1>
             <!-- Nav -->
                 <nav id="nav">
                     <ul>
@@ -24,14 +24,14 @@
                         <li><a href="Rugby.php">Rugby</a></li>
                         <li><a href="Volley.php">Volley</a></li>
                         <li><a href="Escrime.php">Escrime</a></li>
-                        <li class="current"><a href="login-Volley.php">Connexion</a></li>
+                        <li class="current"><a href="login-escrime.php">Connexion</a></li>
                     </ul>
                 </nav>
             </div>
             <br></br>
             <center>
-                <h2>Connexion à la ligue de Volley</h2>
-                    <form method="POST" action="login-Volley.php">
+                <h2>Connexion à la ligue d'Escrime</h2>
+                    <form method="POST" action="login-escrime.php">
                         <div>
                             <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue de Voley</label>
                             <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>

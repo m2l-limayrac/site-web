@@ -52,7 +52,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 if (!$bdd) {
    echo 'Erreur de connection';
 }else{
-    
+
     if (isset ($_POST['submit']))
     {
 

@@ -16,7 +16,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>Powered by Alexis LAPEZE</li>
+						<li>Powerd by Alexis LAPEZE</li>
 					</ul>
 				</div>
 			</div>';
@@ -38,7 +38,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>Powered by Clement ROUSSEL</li>
+						<li>Powerd by Clement ROUSSEL</li>
 					</ul>
 				</div>
 			</div>';
@@ -60,29 +60,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>Powered by Julien PINET</li>
-					</ul>
-				</div>
-			</div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "Escrime.php" || basename($_SERVER['PHP_SELF']) == "login-escrime.php") {
-		echo '<section id="cta" class="wrapper style3">
-				<div class="container" id="contact">
-					<header>
-						<h2>Coordonnées de la ligue de Volley</h2>
-					</header>
-				</div>
-			</section>
-			<div id="footer">
-				<!-- Icons -->
-				<ul class="icons">
-					<li><a href="https://www.google.fr/maps/place/13+Rue+Jean+Moulin" class="icon fa-map-marker"><span class="label">Adresse</span><p class="icones">13 rue Jean Moulin 54510 TOMBLAINE</p></a></li>
-					<li><a href="tel:+33383188719" class="icon fa-phone"><span class="label">Téléphone</span><p class="icones">03 83 18 87 19</p></a></li>
-					<li><a class="icon fa-fax"><span class="label">FAX</span><p class="icones">03 83 18 87 41</p></a></li>
-					<li><a href="mailto: ligue.escrime@lorraine-sport.com" class="icon fa-at"><span class="label">e-mail</span><p class="icones"> ligue.escrime@lorraine-sport.com</p></a></li>
-				</ul>
-				<div class="copyright">
-					<ul class="menu">
-						<li>Powered by Clement ROUSSEL</li>
+						<li>Powerd by Julien PINET</li>
 					</ul>
 				</div>
 			</div>';
