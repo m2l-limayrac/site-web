@@ -24,7 +24,8 @@
                 <span class="custom-dropdown custom-dropdown--white">
                     <select name="choixLigue" class="custom-dropdown__select custom-dropdown__select--white">
                         <option value="Rugby">Ligue de Rugby</option>
-                        <option value="volley">Ligue de volley</option>       
+                        <option value="volley">Ligue de volley</option>
+                        <option value="escrime">Ligue d'escrime</option>       
                     </select>
                 </span>
 
@@ -61,9 +62,13 @@ if (!$bdd) {
             if ($choix == 'Rugby') {
                 $choix = 1;
             }
-            else if ($choix == 'volley')
+            if ($choix == 'volley')
             {
                 $choix = 2;
+            }
+            if ($choix == 'escrime')
+            {
+                $choix = 3;
             }
 
             $username= $_POST['username'];
@@ -79,20 +84,32 @@ if (!$bdd) {
             else
             {
                 echo "error".$sql."<br>".mysqli_error($bdd);
+                echo "<script>alert(\"Erreur vous n'avais pas ete enregister\")</script>";
+
             }
         }
-           
+
         if ($choix == 1 )
         {
+            echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Rugby\")</script>";
             header('Location: ./Rugby.php');
             exit();
         } 
-        else 
+        if ($choix == 2) 
         {
+             echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Volley\")</script>";
             header('Location: ./Volley.php');
             exit();
-        }  
+        }
+        if ($choix == 3) 
+        {
+            
+            echo "<script>alert(\"Vous avez bien ete inscrit a la ligue d'escrime\")</script>";
+            header('Location: ./Escrime.php');
+            exit();
+        }   
 
     }
 }
  ?>
+ </div></html>
