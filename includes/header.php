@@ -5,12 +5,16 @@
 		echo "<title>Ligue de Rugby</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "Volley.php") {
 		echo "<title>Ligue de Volley</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "Escrime.php") {
+		echo "<title>Ligue d'Escrime</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "Register.php") {
 		echo "<title>Inscription</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
 		echo "<title>login-Rugby</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "login-volley.php") {
 		echo "<title>login-Volley</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "list.php") {
+		echo "<title>FAQ</title>";
 	}
  ?>
 

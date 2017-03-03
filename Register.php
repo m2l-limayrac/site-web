@@ -34,7 +34,7 @@
                     <input type="email" class="form-control" name="Mail" id="Mail" placeholder="Mail" required>
                 </div>
                 <br></br>
-                <button type="submit" class="button alt">Inscription</button>
+                <button type="submit" name="submit" class="button alt">Inscription</button>
             </form>
         </div>
         <div class="col-md-3">
@@ -51,7 +51,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 if (!$bdd) {
    echo 'Erreur de connection';
 }else{
-
+    
     if (isset ($_POST['submit']))
     {
 

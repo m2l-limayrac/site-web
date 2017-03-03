@@ -16,7 +16,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>Powerd by Alexis LAPEZE</li>
+						<li>Powered by Alexis LAPEZE</li>
 					</ul>
 				</div>
 			</div>';
@@ -38,7 +38,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>Powerd by Clement ROUSSEL</li>
+						<li>Powered by Clement ROUSSEL</li>
 					</ul>
 				</div>
 			</div>';
@@ -60,7 +60,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>Powerd by Julien PINET</li>
+						<li>Powered by Julien PINET</li>
 					</ul>
 				</div>
 			</div>';

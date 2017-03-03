@@ -28,14 +28,14 @@
 							<section class="6u 12u(narrower)">
 								<div class="box highlight">
 									<img class="icon" src="./images/Volleyball-icon.png" width="50" height="50" alt="Logo-Volley">
-									<a href="./Volley.html"><h3>Ligue de Volley</h3></a>
+									<a href="./Volley.php"><h3>Ligue de Volley</h3></a>
 									<p>Le volley-ball est un sport collectif, dans lequel 2 équipes de 6 joueurs, séparées par un filet, s'affrontent avec un ballon sur un terrain rectangulaire.</p>
 								</div>
 							</section>
 							<section class="6u 12u(narrower)">
 								<div class="box highlight">
 									<img class="icon" src="./images/Rugby-icon.png" width="50" height="50" alt="Logo-Rugby">
-									<a href="./Rugby.html"><h3>Ligue de Rugby</h3></a>
+									<a href="./Rugby.php"><h3>Ligue de Rugby</h3></a>
 									<p>Le rugby est un sport de contact anglo-saxon cree fin XIX qui se joue a 15 par equipe sur un terrain et qui consiste a marquer le plus d'essai en 80 minute pour gagner la partie</p>
 								</div>
 							</section>

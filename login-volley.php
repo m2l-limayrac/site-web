@@ -22,7 +22,6 @@ if(isset($_POST['connexion']))
                     }   
                     else 
                     {
-                    
                         $test = "SELECT id_ligue FROM user WHERE pseudo = '$pseudo'";
                         echo "$test";
                         $result = mysqli_query($mysqli, $test);

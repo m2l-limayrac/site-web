@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 24 Février 2017 à 12:26
+-- Généré le :  Ven 03 Mars 2017 à 10:12
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `m2l`
 --
+CREATE DATABASE IF NOT EXISTS `m2l` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `m2l`;
 
 -- --------------------------------------------------------
 
@@ -26,14 +28,17 @@ SET time_zone = "+00:00";
 -- Structure de la table `faq`
 --
 
-CREATE TABLE `faq` (
-  `id_faq` int(11) NOT NULL,
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE IF NOT EXISTS `faq` (
+  `id_faq` int(11) NOT NULL AUTO_INCREMENT,
   `question` text CHARACTER SET utf8,
   `reponse` text CHARACTER SET utf8,
   `dat_question` date DEFAULT NULL,
   `dat_reponse` date DEFAULT NULL,
-  `id_user` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_user` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_faq`),
+  KEY `FK_Faq_id_user` (`id_user`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `faq`
@@ -49,10 +54,12 @@ INSERT INTO `faq` (`id_faq`, `question`, `reponse`, `dat_question`, `dat_reponse
 -- Structure de la table `ligue`
 --
 
-CREATE TABLE `ligue` (
-  `id_ligue` int(11) NOT NULL,
-  `lib_lig` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `ligue`;
+CREATE TABLE IF NOT EXISTS `ligue` (
+  `id_ligue` int(11) NOT NULL AUTO_INCREMENT,
+  `lib_lig` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id_ligue`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `ligue`
@@ -69,14 +76,18 @@ INSERT INTO `ligue` (`id_ligue`, `lib_lig`) VALUES
 -- Structure de la table `user`
 --
 
-CREATE TABLE `user` (
-  `id_user` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `pseudo` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
   `mdp` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
   `mail` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
   `id_usertype` int(11) DEFAULT NULL,
-  `id_ligue` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_ligue` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_user`),
+  KEY `FK_User_id_usertype` (`id_usertype`),
+  KEY `FK_User_id_ligue` (`id_ligue`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `user`
@@ -107,11 +118,13 @@ INSERT INTO `user` (`id_user`, `pseudo`, `mdp`, `mail`, `id_usertype`, `id_ligue
 -- Structure de la table `usertype`
 --
 
-CREATE TABLE `usertype` (
-  `id_usertype` int(11) NOT NULL,
+DROP TABLE IF EXISTS `usertype`;
+CREATE TABLE IF NOT EXISTS `usertype` (
+  `id_usertype` int(11) NOT NULL AUTO_INCREMENT,
   `lib_usertype` varchar(25) DEFAULT NULL,
-  `description` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `description` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_usertype`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `usertype`
@@ -122,61 +135,6 @@ INSERT INTO `usertype` (`id_usertype`, `lib_usertype`, `description`) VALUES
 (2, 'admin', 'contrôle sur son sport'),
 (3, 'SuperAdmin', 'controle sur tous le site');
 
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `faq`
---
-ALTER TABLE `faq`
-  ADD PRIMARY KEY (`id_faq`),
-  ADD KEY `FK_Faq_id_user` (`id_user`);
-
---
--- Index pour la table `ligue`
---
-ALTER TABLE `ligue`
-  ADD PRIMARY KEY (`id_ligue`);
-
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `FK_User_id_usertype` (`id_usertype`),
-  ADD KEY `FK_User_id_ligue` (`id_ligue`);
-
---
--- Index pour la table `usertype`
---
-ALTER TABLE `usertype`
-  ADD PRIMARY KEY (`id_usertype`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `faq`
---
-ALTER TABLE `faq`
-  MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT pour la table `ligue`
---
-ALTER TABLE `ligue`
-  MODIFY `id_ligue` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT pour la table `user`
---
-ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
---
--- AUTO_INCREMENT pour la table `usertype`
---
-ALTER TABLE `usertype`
-  MODIFY `id_usertype` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Contraintes pour les tables exportées
 --
