@@ -34,7 +34,7 @@
                     <input type="email" class="form-control" name="Mail" id="Mail" placeholder="Mail" required>
                 </div>
                 <br></br>
-                <button type="submit" class="button alt">Inscription</button>
+                <button type="submit" name="submit" class="button alt">Inscription</button>
             </form>
         </div>
         <div class="col-md-3">
@@ -53,7 +53,7 @@ if (!$bdd) {
 }
 else {
 
-    if (isset ($_POST['valider']))
+    if (isset ($_POST['submit']))
     {
 
         if( $_POST && isset($_POST['username']) && isset($_POST['mdp'])&& isset($_POST['Mail']) && $_POST['choixLigue'])

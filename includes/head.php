@@ -20,6 +20,7 @@
 							</li>
 							<li><a href="Rugby.php">Rugby à XV</a></li>
 							<li><a href="Volley.php">Volley</a></li>
+							<li><a href="edit.php">edit</a></li>
 						</ul>
 					</nav>
 				</div>';
