@@ -1,5 +1,4 @@
 <?php
-
  include 'connexion_script.php';
  if (isset($_POST['connexion'])) {
     $pseudo = htmlentities($_POST['username'], ENT_QUOTES, "ISO-8859-1"); 

@@ -74,7 +74,7 @@ session_start();
 	}elseif (basename($_SERVER['PHP_SELF']) == "Escrime.php") {
 		echo '<div id="header">
 				<!-- Logo -->
-					<h1><a id="logo">M2L <em>Ligue de Escrime</em></a></h1>
+					<h1><a id="logo">M2L <em>Ligue d\'Escrime</em></a></h1>
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>';
@@ -85,7 +85,7 @@ session_start();
 							<li><a href="Volley.php">Volley</a></li>
 							<li><a href="Rugby.php">Rugby</a></li>
 							<li class="current">
-								<a href="Escrime.php">Escrime à XV</a>
+								<a href="Escrime.php">Escrime</a>
 								<ul>
 									<li><a href="#Prés-Escrime">Présentation du Escrime</a></li>
 									<li><a href="#Historique">Historique</a></li>
