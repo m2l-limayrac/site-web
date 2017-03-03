@@ -23,8 +23,7 @@ session_start();
 								</ul>
 							</li>
 							<li><a href="Rugby.php">Rugby à XV</a></li>
-							<li><a href="Volley.php">Volley</a></li>
-							<li><a href="edit.php">Edit</a></li>';
+							<li><a href="Volley.php">Volley</a></li>';
 							if (isset($_SESSION['login'])) {
 								echo '<li><a href="logout.php">Déconnection</a></li>';
 							}
