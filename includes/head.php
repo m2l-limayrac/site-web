@@ -23,17 +23,12 @@ session_start();
 								</ul>
 							</li>
 							<li><a href="Rugby.php">Rugby à XV</a></li>
-<<<<<<< HEAD
 							<li><a href="Volley.php">Volley</a></li>
-							<li><a href="edit.php">edit</a></li>
-						</ul>
-=======
-							<li><a href="Volley.php">Volley</a></li>';
+							<li><a href="edit.php">Edit</a></li>';
 							if (isset($_SESSION['login'])) {
 								echo '<li><a href="logout.php">Déconnection</a></li>';
 							}
 						echo '</ul>
->>>>>>> 7acad34924e0ffab0d68f617020d9ad1c3f1302e
 					</nav>
 				</div>';
 	}elseif (basename($_SERVER['PHP_SELF']) == "Rugby.php") {
