@@ -35,13 +35,13 @@ $bdd = mysqli_connect("localhost","root","","m2l");
           <td><?php echo "".$row[1].""; ?></td>
           <td><?php echo "".$row[2].""; ?></td>
           <td><?php echo "".$row[3].""; ?></td>
-          <td><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images\tabIco\delete.png" title="Effacer" alt="Effacer" class="icon ic_b_drop"></td>
+          <td><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit"><img src="images\tabIco\delete.png" title="Effacer" alt="Effacer" class="icon ic_b_drop"></td>
 
       </tr>
       <?php } ?>
 </tbody>
 </table>
-<td><img src="images\tabIco\edit.png" title="add" alt="add" class="icon ic_b_edit">&nbsp;&nbsp;&nbsp;<a href="edit.php" target="_blank">Ajouter une question</a></td>
+
 </body>
 </html>
 
