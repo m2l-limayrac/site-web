@@ -1,3 +1,34 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+    <head>
+        <?php include './includes/header.php'; ?>
+    </head>
+        <body>
+        <div id="page-wrapper">
+            <!-- Header -->
+             <?php include './includes/head.php'; ?>
+            </div>
+            <br></br>
+            <center>
+                <h2>Ajouter une question a la FAQ</h2>
+                <h2>Question</h2>
+
+                    <form method="POST" action="list.php">
+                        <div>                    
+                            <TEXTAREA name="question" placeholder="Valeur par défaut" rows=10 cols=40></TEXTAREA>                            
+                        </div>   
+                        <br></br>
+                        <button type="submit" class="button alt" name="submit">Enregistrer</button>
+                    </form>
+                <br> </br>
+            </center>
+            <!-- FOOTER -->
+            <?php include './includes/Footer.php'; ?>
+        </div>
+    </body>
+</html>
+
 <?php
 // on se connecte a Mysql 
 $bdd = mysqli_connect("localhost","root","","m2l");
@@ -23,6 +54,7 @@ else {
             if(mysqli_query($bdd,$sql))
             {
                 header('Location: ./list.php');
+                echo "oui";
             }
             else
             {
