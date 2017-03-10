@@ -25,7 +25,8 @@ session_start();
 							<li><a href="Volley.php">Volley</a></li>
 							<li><a href="Escrime.php">Escrime</a></li>';
 							if (isset($_SESSION['login'])) {
-								echo '<li><a href="logout.php">Déconnection</a></li>';
+								echo '<li><a href="list.php">FAQ</a></li>
+								<li><a href="logout.php">Déconnexion</a></li>';
 							}
 						echo '</ul>
 					</nav>
@@ -58,7 +59,8 @@ session_start();
 							<li><a href="Volley.php">Volley</a></li>
 							<li><a href="Escrime.php">Escrime</a></li>';
 									if (isset($_SESSION['login'])) {
-										echo '<li><a href="logout.php">Déconnection</a></li>';
+										echo '<li><a href="list.php">FAQ</a></li>
+										<li><a href="logout.php">Déconnexion</a></li>';
 									}else{
 									 echo '<li>
 											<a href="login-rugby.php">Connexion</a>
@@ -98,7 +100,8 @@ session_start();
 							</li>
 							<li><a href="Escrime.php">Escrime</a></li>';
 								if (isset($_SESSION['login'])) {
-									echo '<li><a href="logout.php">Déconnection</a></li>';
+									echo '<li><a href="list.php">FAQ</a></li>
+									<li><a href="logout.php">Déconnexion</a></li>';
 								}else{
 								 echo '<li>
 											<a href="login-volley.php">Connexion</a>
@@ -138,7 +141,8 @@ session_start();
 								</ul>
 							</li>';
 								if (isset($_SESSION['login'])) {
-									echo '<li><a href="logout.php">Déconnection</a></li>';
+									echo '<li><a href="list.php">FAQ</a></li>
+									<li><a href="logout.php">Déconnexion</a></li>';
 								}else{
 								 echo '<li>
 											<a href="login-Escrime.php">Connexion</a>
@@ -211,5 +215,53 @@ session_start();
 	                    </ul>
 	                </nav>
                 </div>';
+	}elseif (basename($_SERVER['PHP_SELF']) == "list.php") {
+		echo '<div id="header">
+				<!-- Logo -->
+					<h1><a id="logo">M2L <em>FAQ</em></a></h1>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>';
+							if (isset($_SESSION['login'])) {
+								echo '<li><a id="login">Bonjour '.$_SESSION['login'].'</a></li>';
+							}
+						echo '<li><a href="index.php">Accueil</a></li>
+							<li><a href="Rugby.php">Rugby à XV</a></li>
+							<li><a href="Volley.php">Volley</a></li>
+							<li><a href="Escrime.php">Escrime</a></li>
+							<li class="current">
+								<a href="List.php">FAQ</a>
+								<ul>
+									<li><a href="#Prés-Escrime">Je sais pas encore quoi mettre</a></li>
+								</ul>
+							</li>
+							<li><a href="logout.php">Déconnexion</a></li>
+						</ul>
+					</nav>
+				</div>';
+	}elseif (basename($_SERVER['PHP_SELF']) == "add.php") {
+		echo '<div id="header">
+				<!-- Logo -->
+					<h1><a id="logo">M2L <em>FAQ</em></a></h1>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>';
+							if (isset($_SESSION['login'])) {
+								echo '<li><a id="login">Bonjour '.$_SESSION['login'].'</a></li>';
+							}
+						echo '<li><a href="index.php">Accueil</a></li>
+							<li><a href="Rugby.php">Rugby à XV</a></li>
+							<li><a href="Volley.php">Volley</a></li>
+							<li><a href="Escrime.php">Escrime</a></li>
+							<li class="current">
+								<a href="List.php">FAQ</a>
+								<ul>
+									<li><a href="#Prés-Escrime">Je sais pas encore quoi mettre</a></li>
+								</ul>
+							</li>
+							<li><a href="logout.php">Déconnexion</a></li>
+						</ul>
+					</nav>
+				</div>';
 	}
 ?>
