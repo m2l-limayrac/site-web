@@ -13,7 +13,7 @@
                 <h2>Ajouter une question a la FAQ</h2>
                 <h2>Question</h2>
 
-                    <form method="POST" action="add.php">
+                    <form method="POST" action="list.php">
                         <div>                    
                             <TEXTAREA name="question" placeholder="Valeur par défaut" rows=10 cols=40></TEXTAREA>                            
                         </div>   
@@ -52,7 +52,7 @@ else
             //$sql->('id' => $_SESSION["user"]["id_user"]);
             if(mysqli_query($bdd,$sql))
             {
-                echo "votre question a bien etais prise en compte";
+                echo "oui";
             }
             else
             {
