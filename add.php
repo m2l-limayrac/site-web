@@ -52,7 +52,7 @@ else
             //$sql->('id' => $_SESSION["user"]["id_user"]);
             if(mysqli_query($bdd,$sql))
             {
-                echo "votre question a bien etais prise en compte";
+                header('Location: ./list.php');
             }
             else
             {
