@@ -24,19 +24,27 @@ function connect ($pseudo, $MotDePasse){
                         $test = "SELECT id_ligue FROM user WHERE pseudo = '$pseudo'";
                         $result = mysqli_query($mysqli, $test);
                         
-                            if (mysqli_num_rows($result) > 0)
-                            {
+                            if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)){
-                                    if($row["id_ligue"] == 1)
-                                {
-                                    session_start();
-                                    $_SESSION['login'] = $pseudo;
-                                    $_SESSION['ligue'] = $row["id_ligue"];
-                                    header('Location: ./Rugby.php');
-                                    exit();
-                                      
-                                }  else 
-                                {
+                                    if($row["id_ligue"] == 1){
+                                        session_start();
+                                        $_SESSION['login'] = $pseudo;
+                                        $_SESSION['ligue'] = $row["id_ligue"];
+                                        header('Location: ./Rugby.php');
+                                        exit();     
+                                    } else if($row["id_ligue"] == 2){
+                                        session_start();
+                                        $_SESSION['login'] = $pseudo;
+                                        $_SESSION['ligue'] = $row["id_ligue"];
+                                        header('Location: ./Volley.php');
+                                        exit();     
+                                    }else if ($row["id_ligue"] == 3) {
+                                       session_start();
+                                        $_SESSION['login'] = $pseudo;
+                                        $_SESSION['ligue'] = $row["id_ligue"];
+                                        header('Location: ./Escrime.php');
+                                        exit();    
+                                    }else{
                                     echo "<script>alert(\"Vous tentez de vous connecter a la mauvaise ligue!!\")</script>";
                                 }
                                 }                                

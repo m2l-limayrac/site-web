@@ -14,34 +14,22 @@
     <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <div id="header">
-            <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue d'Escrime</em></a></h1>
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Rugby.php">Rugby</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
-                        <li><a href="Escrime.php">Escrime</a></li>
-                        <li class="current"><a href="login-escrime.php">Connexion</a></li>
-                    </ul>
-                </nav>
-            </div>
+            
+            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue d'Escrime</h2>
                     <form method="POST" action="login-escrime.php">
                         <div>
-                            <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue de Voley</label>
+                            <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue d'Escrime</label>
                             <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
                         </div>
                         <div>
-                            <label for="exampleInputPassword1">Mot de passe (ligue de Volley)</label>
+                            <label for="exampleInputPassword1">Mot de passe (ligue d'Escrime)</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
                         </div>
                         <br></br>
-                        <button type="submit" class="button alt" name="connexion">Connexion à la ligue de Volley</button>
+                        <button type="submit" class="button alt" name="connexion">Connexion à la ligue d'Escrime</button>
                     </form>
                 <br><br>
                 <div>

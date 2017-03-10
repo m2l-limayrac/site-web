@@ -18,7 +18,7 @@
 				      </ul>
 					</div>
 					<header class="headerLigue">
-						<h2><em>BIENVENUE SUR LE SITE DE LA MAISON DES LIGUE DE LORRAINE</em></h2>
+						<h2><em>BIENVENUE SUR LE SITE DE LA MAISON DES LIGUES DE LORRAINE</em></h2>
 					</header>
 				</section>
 			<!-- Highlights -->

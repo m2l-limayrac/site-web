@@ -11,6 +11,8 @@
 		echo "<title>login-Rugby</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "login-volley.php") {
 		echo "<title>login-Volley</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "login-escrime.php") {
+		echo "<title>login-Escrime</title>";
 	}
  ?>
 
