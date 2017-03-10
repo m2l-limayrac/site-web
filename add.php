@@ -6,18 +6,7 @@
         <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <div id="header">
-            <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue de Rugby</em></a></h1>
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
-                        <li><a href="Rugby.php">Rugby</a></li>
-                        <li class="current"><a href="login-rugby.php">Connexion</a></li>
-                    </ul>
-                </nav>
+             <?php include './includes/head.php'; ?>
             </div>
             <br></br>
             <center>
@@ -51,18 +40,16 @@ else
 
     if (isset ($_POST['submit']))
     {
-
-        if( $_POST && isset($_POST['question']))
+        if(isset($_POST['question']))
         {   
            
             $question= $_POST['question'];
 
-            $date = date("d-m-Y") ;
-            $id = $_SESSION["id_user"];
-
-            $sql ="INSERT INTO faq('question', 'date_question', 'id_user') VALUES ('".$question."','".$date."','".$id."')";
+            $date = date("Y-m-d") ;
+            $id = mysqli_query($bdd, "SELECT id_user FROM user WHERE pseudo = '".$_SESSION['login']."';");
+            $row = mysqli_fetch_row($id);
+            $sql = "INSERT INTO faq(question, dat_question, id_user) VALUES ('$question','$date',$row[0])";
             //$sql->('id' => $_SESSION["user"]["id_user"]);
-
             if(mysqli_query($bdd,$sql))
             {
                 echo "votre question a bien etais prise en compte";
@@ -76,5 +63,4 @@ else
            
     }
 }
-
- ?>
+?>

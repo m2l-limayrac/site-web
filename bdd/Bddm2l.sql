@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `faq` (
   `id_user` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_faq`),
   KEY `FK_Faq_id_user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Contenu de la table `faq`
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `ligue` (
   `id_ligue` int(11) NOT NULL AUTO_INCREMENT,
   `lib_lig` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`id_ligue`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Contenu de la table `ligue`
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id_user`),
   KEY `FK_User_id_usertype` (`id_usertype`),
   KEY `FK_User_id_ligue` (`id_ligue`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Contenu de la table `user`
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `usertype` (
   `lib_usertype` varchar(25) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_usertype`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Contenu de la table `usertype`
