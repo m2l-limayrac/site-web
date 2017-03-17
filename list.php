@@ -40,7 +40,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
                 <td><?php echo "".$row[2].""; ?></td>
                 <td><?php echo "".$row[3].""; ?></td>
                 <td>
-                <a href="edit.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit"></a>
+                <a href="edit.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit"></a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="delete.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\delete.png" title="Effacer" alt="Effacer" class="icon ic_b_drop"></a>
               </tr>
       <?php 
