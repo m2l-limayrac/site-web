@@ -52,7 +52,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
   <textarea name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
   <h2>Reponse</h2>
   <textarea name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
-  <button type="submit" name="submit" placeholder>Enregistrer</button>
+  <button type="submit" name="submit">Enregistrer</button>
 </form>
 </body>
 </html>

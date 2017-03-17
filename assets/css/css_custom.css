@@ -57,3 +57,10 @@ caption {
 .login{
 	margin-right: 50%;
 }
+.tableauList{
+	position: relative;
+    margin: 30px 74px 22em 57px;
+}
+.aDuTableau{
+	border-bottom: dotted 0px;
+}
