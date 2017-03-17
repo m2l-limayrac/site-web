@@ -21,6 +21,8 @@
                         <br></br>
                         <button type="submit" class="button alt" name="submit">Enregistrer</button>
                     </form>
+                    <br></br>
+                    <a href="list.php"><img src="images\tabIco\icoListe.png" title="liste" alt="liste" class="icon ic_b_drop" width= "18";">Retourner a la liste de Question.</a>
                 <br> </br>
             </center>
             <!-- FOOTER -->

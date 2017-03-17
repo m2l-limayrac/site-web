@@ -22,7 +22,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
             $question = $_POST['question'];
             $reponse = $_POST['reponse'];
 
-            $sql ="UPDATE faq SET question = '$question' , reponse= '$reponse' WHERE id_faq = $id"; 
+            $sql ="UPDATE faq SET question = \"$question\" , reponse= \"$reponse\" WHERE id_faq = $id"; 
             
             
             if(mysqli_query($bdd,$sql))
@@ -54,6 +54,8 @@ $bdd = mysqli_connect("localhost","root","","m2l");
   <textarea name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
   <button type="submit" name="submit" placeholder>Enregistrer</button>
 </form>
+<br></br>
+<a href="list.php"><img src="images\tabIco\icoListe.png" title="liste" alt="liste" class="icon ic_b_drop" width= "18";">Retourner a la liste de Question.</a>
 </body>
 </html>
 
