@@ -14,7 +14,7 @@
                 <h2>Ajouter une question a la FAQ</h2>
                 <h2>Question</h2>
 
-                    <form method="POST" action="list.php">
+                    <form method="POST" action="add.php">
                         <div>                    
                             <TEXTAREA name="question" placeholder="Valeur par défaut" rows=10 cols=40></TEXTAREA>                            
                         </div>   
@@ -46,10 +46,11 @@ else {
            
             $question= $_POST['question'];
 
-            $sql ="INSERT INTO faq(question, date_question, id_user) VALUES('".$question."':d,:id)";
-            $sql->execute(array(
-            'd' => date("Y-m-d"),
-            'id' => $_SESSION["user"]["id_user"]))
+            $date = date("Y-m-d") ;
+            $id = mysqli_query($bdd, "SELECT id_user FROM user WHERE pseudo = '".$_SESSION['login']."';");
+            $row = mysqli_fetch_row($id);
+            $sql = "INSERT INTO faq(question, dat_question, id_user) VALUES ('$question','$date',$row[0])";
+           //$sql->('id' => $_SESSION["user"]["id_user"]);
 
             if(mysqli_query($bdd,$sql))
             {
@@ -66,14 +67,6 @@ else {
 }
 
  ?>
-        <div class="container marketing">
-            <h1>Ajouter une question à la FAQ </h1>
-            <label for="exampleInputEmail1"><p>Veuillez saisir une question.</p></label>
-            <textarea name="question" placeholder="Votre question" rows="10"></textarea>
-            <button type="submit" placeholder>Envoyer la question</button>
-            </form>
-        </div>
-    </body>
 </html>
 
 
