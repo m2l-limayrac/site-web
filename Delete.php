@@ -16,13 +16,8 @@ $bdd = mysqli_connect("localhost","root","","m2l");
     if (isset($_POST['submit']))
     {
 
-      if(isset($_POST['question'])  && isset($_POST['reponse']))
-        {   
-           
-            $question = $_POST['question'];
-            $reponse = $_POST['reponse'];
 
-            $sql ="UPDATE faq SET question = \"$question\" , reponse= \"$reponse\" WHERE id_faq = $id"; 
+            $sql ="DELETE FROM faq WHERE id_faq = $id"; 
             
             
             if(mysqli_query($bdd,$sql))
@@ -34,7 +29,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
             {
                 echo "error".$sql."<br>".mysqli_error($bdd);
             }
-        }
+        
 
     }
 ?>
@@ -47,15 +42,13 @@ $bdd = mysqli_connect("localhost","root","","m2l");
     </head>
 <body>
 
-<form method="post" action="edit.php<?php echo "?id=$id"; ?>">
+<form method="post" action="Delete.php<?php echo "?id=$id"; ?>">
   <h2>Question</h2>
-  <textarea name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
+  <textarea disabled name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
   <h2>Reponse</h2>
-  <textarea name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
-  <button type="submit" name="submit">Enregistrer</button>
+  <textarea disabled name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
+  <button type="submit" name="submit" placeholder>Supprimer la question</button>
 </form>
-<br></br>
-<a href="list.php"><img src="images\tabIco\icoListe.png" title="liste" alt="liste" class="icon ic_b_drop" width= "18";">Retourner a la liste de Question.</a>
 </body>
 </html>
 

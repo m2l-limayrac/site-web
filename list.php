@@ -31,7 +31,6 @@ $bdd = mysqli_connect("localhost","root","","m2l");
               if (!$bdd) {
                 echo 'Erreur de connection';
               }else{
-
                 $req = mysqli_query($bdd,"SELECT faq.id_faq,user.pseudo,faq.question,faq.reponse FROM faq inner join user on faq.id_user = user.id_user WHERE id_ligue = ".$_SESSION['ligue']);
               } 
               while($row = mysqli_fetch_row($req)) { ?>
