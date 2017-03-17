@@ -230,7 +230,7 @@ session_start();
 							<li><a href="Volley.php">Volley</a></li>
 							<li><a href="Escrime.php">Escrime</a></li>
 							<li class="current">
-								<a href="List.php">FAQ</a>
+								<a href="list.php">FAQ</a>
 								<ul>
 									<li><a href="#Prés-Escrime">Je sais pas encore quoi mettre</a></li>
 								</ul>
@@ -254,7 +254,7 @@ session_start();
 							<li><a href="Volley.php">Volley</a></li>
 							<li><a href="Escrime.php">Escrime</a></li>
 							<li class="current">
-								<a href="List.php">FAQ</a>
+								<a href="list.php">FAQ</a>
 								<ul>
 									<li><a href="#Prés-Escrime">Je sais pas encore quoi mettre</a></li>
 								</ul>
