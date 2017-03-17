@@ -42,8 +42,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 <!DOCTYPE HTML> 
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/css_custom.css" /> 
+        <?php include './includes/header.php'; ?>
     </head>
 <body>
 
@@ -52,10 +51,10 @@ $bdd = mysqli_connect("localhost","root","","m2l");
   <textarea name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
   <h2>Reponse</h2>
   <textarea name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
-  <button type="submit" name="submit">Enregistrer</button>
+  <button type="submit" class="button" name="submit">Enregistrer</button>
 </form>
-<br></br>
-<a href="list.php"><img src="images\tabIco\icoListe.png" title="liste" alt="liste" class="icon ic_b_drop" width= "18";">Retourner a la liste de Question.</a>
+<br>
+<button class="button" onclick="window.location.href='list.php'">Retourner a la liste de Question.</button>
 </body>
 </html>
 

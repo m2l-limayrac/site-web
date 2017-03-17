@@ -51,7 +51,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
         ?>
           </tbody>
         </table>
-        <p><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit"><button class="button" href="add.php">Ajouter une question</button></p>
+        <p><button class="button" onclick="window.location.href='add.php'">Ajouter une question</button></p>
       </div>
     </div>
     <!-- Scripts -->

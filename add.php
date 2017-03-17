@@ -22,7 +22,7 @@
                         <button type="submit" class="button alt" name="submit">Enregistrer</button>
                     </form>
                     <br></br>
-                    <a href="list.php"><img src="images\tabIco\icoListe.png" title="liste" alt="liste" class="icon ic_b_drop" width= "18";">Retourner a la liste de Question.</a>
+                    <button class="button" onclick="window.location.href='list.php'">Retourner a la liste de Question.</button>
                 <br> </br>
             </center>
             <!-- FOOTER -->

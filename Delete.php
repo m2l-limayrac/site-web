@@ -37,8 +37,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 <!DOCTYPE HTML> 
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/css_custom.css" /> 
+        <?php include './includes/header.php'; ?>
     </head>
 <body>
 

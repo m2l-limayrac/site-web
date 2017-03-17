@@ -15,6 +15,12 @@
 		echo "<title>login-Escrime</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "list.php") {
 		echo "<title>FAQ</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "edit.php") {
+		echo "<title>FAQ-Modification</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "Delete.php") {
+		echo "<title>FAQ-delete</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "add.php") {
+		echo "<title>FAQ-ajout</title>";
 	}
  ?>
 
