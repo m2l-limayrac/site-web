@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `pseudo` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
   `mdp` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
   `mail` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
-  `id_usertype` int(11) DEFAULT NULL,
+  `id_usertype` int(11) DEFAULT 1,
   `id_ligue` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   KEY `FK_User_id_usertype` (`id_usertype`),
