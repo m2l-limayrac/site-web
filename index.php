@@ -6,7 +6,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- Header -->
-			<?php include './includes/head.php'; print_r($_SESSION)?>
+			<?php include './includes/head.php';?>
 			<!-- Banner -->
 			<div>
 				<section id="banner" class="mainBanner">

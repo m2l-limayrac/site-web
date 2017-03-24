@@ -22,8 +22,7 @@ function connect ($pseudo, $MotDePasse){
                     }   
                     else 
                     {
-                   
-                        $test = "SELECT * FROM user WHERE pseudo = '$pseudo'";
+                        $test = "SELECT id_ligue, id_user, id_usertype FROM user WHERE pseudo = '$pseudo'";
                         $result = mysqli_query($mysqli, $test);
                         
                             if (mysqli_num_rows($result) > 0) {

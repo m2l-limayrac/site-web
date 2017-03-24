@@ -20,7 +20,7 @@
 	}elseif (basename($_SERVER['PHP_SELF']) == "edit.php") {
 		echo "<title>FAQ-Modification</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "delete.php") {
-		echo "<title>FAQ-delete</title>";
+		echo "<title>FAQ-suppression</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "add.php") {
 		echo "<title>FAQ-ajout</title>";
 	}

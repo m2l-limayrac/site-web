@@ -1,5 +1,5 @@
 <?php 
-	if (basename($_SERVER['PHP_SELF']) == "index.php" || basename($_SERVER['PHP_SELF']) == "register.php" || basename($_SERVER['PHP_SELF']) == "edit.php" || basename($_SERVER['PHP_SELF']) == "delete.php") {
+	if (basename($_SERVER['PHP_SELF']) == "index.php" || basename($_SERVER['PHP_SELF']) == "register.php" || basename($_SERVER['PHP_SELF']) == "edit.php" || basename($_SERVER['PHP_SELF']) == "delete.php"|| basename($_SERVER['PHP_SELF']) == "add.php") {
 		echo '<section id="cta" class="wrapper style3">
 				<div class="container" id="contact">
 					<header>
