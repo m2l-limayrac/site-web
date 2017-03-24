@@ -14,8 +14,8 @@
     <body>
         <div id="page-wrapper">
             <!-- Header -->
-            
             <?php include './includes/head.php'; ?>
+            
             <br></br>
             <center>
                 <h2>Connexion à la ligue d'Escrime</h2>

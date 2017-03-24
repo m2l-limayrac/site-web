@@ -1,6 +1,6 @@
 <?php
 session_start();
-	if (basename($_SERVER['PHP_SELF']) == "index.php") {
+	if (basename($_SERVER['PHP_SELF']) == "index.php" || basename($_SERVER['PHP_SELF']) == "edit.php") {
 		echo '<div id="header">
 				<!-- Logo -->
 					<h1><a id="logo">M2L <em>Maison des ligues</em></a></h1>
@@ -155,7 +155,20 @@ session_start();
 					</nav>
 				</div>';
 	}elseif (basename($_SERVER['PHP_SELF']) == "register.php") {
-		echo '';
+		echo '<div id="header">
+				<!-- Logo -->
+	                <h1><a id="logo">M2L <em>Enregistrement</em></a></h1>
+	            <!-- Nav -->
+	                <nav id="nav">
+	                    <ul>
+	                        <li><a href="index.php">Accueil</a></li>
+	                        <li><a href="rugby.php">Rugby</a></li>
+	                        <li><a href="volley.php">Volley</a></li>
+	                        <li><a href="escrime.php">Escrime</a></li>
+	                        <li class="current"><a href="register.php">Inscription</a></li>
+	                    </ul>
+	                </nav>
+                </div>';
 	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
 		echo '<div id="header">
 				<!-- Logo -->
@@ -166,6 +179,7 @@ session_start();
 	                        <li><a href="index.php">Accueil</a></li>
 	                        <li><a href="rugby.php">Rugby</a></li>
 	                        <li><a href="volley.php">Volley</a></li>
+	                        <li><a href="escrime.php">Escrime</a></li>
 	                        <li class="current">
 								<a href="login-rugby.php">Connexion</a>
 								<ul>

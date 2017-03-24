@@ -3,8 +3,8 @@
     <head>
         <?php include './includes/header.php'; ?>         
     </head>
-<div class="container">
 <body>
+<div id="page-wrapper">
 <?php include './includes/head.php'; ?>  
     <center>
         <h2>Inscription</h2>
@@ -42,6 +42,7 @@
         </div>
         <?php include './includes/footer.php'; ?>
     </center>
+</div>
 </body>
 
 <?php 
