@@ -157,7 +157,7 @@
 				</div>
 			</section>
 			<!-- CTA -->
-			<?php include './includes/Footer.php'; ?>
+			<?php include './includes/footer.php'; ?>
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>

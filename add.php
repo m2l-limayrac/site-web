@@ -16,7 +16,7 @@
 
                     <form method="POST" action="add.php">
                         <div>                    
-                            <TEXTAREA name="question" placeholder="Valeur par défaut" rows=10 cols=40></TEXTAREA>                            
+                            <TEXTAREA name="question" placeholder="Saisissez votre question " rows=10 cols=40></TEXTAREA>                            
                         </div>   
                         <br></br>
                         <button type="submit" class="button alt" name="submit">Enregistrer</button>
@@ -26,7 +26,7 @@
                 <br> </br>
             </center>
             <!-- FOOTER -->
-            <?php include './includes/Footer.php'; ?>
+            <?php include './includes/footer.php'; ?>
         </div>
     </body>
 </html>

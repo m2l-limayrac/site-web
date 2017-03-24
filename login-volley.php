@@ -14,24 +14,11 @@
     <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <div id="header">
-            <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue de Volley</em></a></h1>
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Rugby.php">Rugby</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
-                        <li><a href="Escrime.php">Escrime</a></li>
-                        <li class="current"><a href="login-Volley.php">Connexion</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue de Volley</h2>
-                    <form method="POST" action="login-Volley.php">
+                    <form method="POST" action="login-volley.php">
                         <div>
                             <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue de Voley</label>
                             <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
@@ -45,12 +32,12 @@
                     </form>
                 <br><br>
                 <div>
-                    <p>Vous souhaitez vous inscrire ? <a href="Register.php">Cliquez ici.</a></p>
+                    <p>Vous souhaitez vous inscrire ? <a href="register.php">Cliquez ici.</a></p>
                 </div>
             </center>
         </div>
         <!-- FOOTER -->
-        <?php include './includes/Footer.php'; ?>
+        <?php include './includes/footer.php'; ?>
     </body>
 </html>
 

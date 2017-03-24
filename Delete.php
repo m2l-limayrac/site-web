@@ -40,12 +40,12 @@ $bdd = mysqli_connect("localhost","root","","m2l");
         <?php include './includes/header.php'; ?>
     </head>
 <body>
-
-<form method="post" action="Delete.php<?php echo "?id=$id"; ?>">
+<?php include './includes/head.php'; ?>
+<form method="post" action="delete.php<?php echo "?id=$id"; ?>">
   <h2>Question</h2>
-  <textarea disabled name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
+  <textarea name="question" rows="5" cols="40" disabled><?php echo $row1[0];?></textarea>
   <h2>Reponse</h2>
-  <textarea disabled name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
+  <textarea name="reponse" rows="5" cols="40" disabled><?php echo $row2[0];?></textarea>
   <button type="submit" name="submit" placeholder>Supprimer la question</button>
 </form>
 </body>

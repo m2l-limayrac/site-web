@@ -30,19 +30,19 @@ function connect ($pseudo, $MotDePasse){
                                         session_start();
                                         $_SESSION['login'] = $pseudo;
                                         $_SESSION['ligue'] = $row["id_ligue"];
-                                        header('Location: ./Rugby.php');
+                                        header('Location: ./rugby.php');
                                         exit();     
                                     } else if($row["id_ligue"] == 2){
                                         session_start();
                                         $_SESSION['login'] = $pseudo;
                                         $_SESSION['ligue'] = $row["id_ligue"];
-                                        header('Location: ./Volley.php');
+                                        header('Location: ./volley.php');
                                         exit();     
                                     }else if ($row["id_ligue"] == 3) {
                                        session_start();
                                         $_SESSION['login'] = $pseudo;
                                         $_SESSION['ligue'] = $row["id_ligue"];
-                                        header('Location: ./Escrime.php');
+                                        header('Location: ./escrime.php');
                                         exit();    
                                     }else{
                                     echo "<script>alert(\"Vous tentez de vous connecter a la mauvaise ligue!!\")</script>";

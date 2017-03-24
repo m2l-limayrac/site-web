@@ -33,12 +33,12 @@
                     </form>
                 <br><br>
                 <div>
-                    <p>Vous souhaitez vous inscrire ? <a href="Register.php">Cliquez ici.</a></p>
+                    <p>Vous souhaitez vous inscrire ? <a href="register.php">Cliquez ici.</a></p>
                 </div>
             </center>
         </div>
         <!-- FOOTER -->
-        <?php include './includes/Footer.php'; ?>
+        <?php include './includes/footer.php'; ?>
     </body>
 </html>
 

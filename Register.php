@@ -1,17 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/css_custom.css" />
-         
+        <?php include './includes/header.php'; ?>         
     </head>
 <div class="container">
 <body>
+<?php include './includes/head.php'; ?>  
     <center>
         <h2>Inscription</h2>
         <div>    
             <br>
-            <form method="POST" action="Register.php">
+            <form method="POST" action="register.php">
                 <div >
                     <label for="exampleInputEmail1">Saisissez un pseudo</label>
                     <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
@@ -41,6 +40,7 @@
         <div class="col-md-3">
             <p>Vous souhaitez vous Connectez?<a href="login-volley.php">Cliquez ici.</a></p>
         </div>
+        <?php include './includes/footer.php'; ?>
     </center>
 </body>
 
@@ -62,11 +62,11 @@ if (!$bdd) {
             if ($choix == 'Rugby') {
                 $choix = 1;
             }
-            if ($choix == 'volley')
+            if ($choix == 'Volley')
             {
                 $choix = 2;
             }
-            if ($choix == 'escrime')
+            if ($choix == 'Escrime')
             {
                 $choix = 3;
             }
@@ -92,20 +92,20 @@ if (!$bdd) {
         if ($choix == 1 )
         {
             echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Rugby\")</script>";
-            header('Location: ./Rugby.php');
+            header('Location: ./rugby.php');
             exit();
         } 
         if ($choix == 2) 
         {
              echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Volley\")</script>";
-            header('Location: ./Volley.php');
+            header('Location: ./volley.php');
             exit();
         }
         if ($choix == 3) 
         {
             
             echo "<script>alert(\"Vous avez bien ete inscrit a la ligue d'escrime\")</script>";
-            header('Location: ./Escrime.php');
+            header('Location: ./escrime.php');
             exit();
         }   
 

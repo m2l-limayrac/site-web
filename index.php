@@ -137,7 +137,7 @@
 					</div>
 				</section>
 			<!-- Footer -->
-				<?php include './includes/Footer.php'; ?>
+				<?php include './includes/footer.php'; ?>
 			</div>
 		</div>
 		<!-- Scripts -->

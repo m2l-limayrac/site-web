@@ -20,7 +20,7 @@
 					</ul>
 				</div>
 			</div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "Rugby.php" || basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "rugby.php" || basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
 		echo '<section id="cta" class="wrapper style3">
 				<div class="container" id="contact">
 					<header>
@@ -42,7 +42,7 @@
 					</ul>
 				</div>
 			</div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "Volley.php" || basename($_SERVER['PHP_SELF']) == "login-volley.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "volley.php" || basename($_SERVER['PHP_SELF']) == "login-volley.php") {
 		echo '<section id="cta" class="wrapper style3">
 				<div class="container" id="contact">
 					<header>
@@ -64,7 +64,7 @@
 					</ul>
 				</div>
 			</div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "Escrime.php" || basename($_SERVER['PHP_SELF']) == "login-Escrime.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "escrime.php" || basename($_SERVER['PHP_SELF']) == "login-escrime.php") {
 		echo '<section id="cta" class="wrapper style3">
 				<div class="container" id="contact">
 					<header>

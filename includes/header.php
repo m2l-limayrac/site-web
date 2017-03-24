@@ -1,11 +1,13 @@
 <?php 
 	if (basename($_SERVER['PHP_SELF']) == "index.php") {
 		echo "<title>Maison des ligues - M2L</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "Rugby.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "rugby.php") {
 		echo "<title>Ligue de Rugby</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "Volley.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "volley.php") {
 		echo "<title>Ligue de Volley</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "Register.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "escrime.php") {
+		echo "<title>Ligue d'Escrime</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "register.php") {
 		echo "<title>Inscription</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
 		echo "<title>login-Rugby</title>";
@@ -17,7 +19,7 @@
 		echo "<title>FAQ</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "edit.php") {
 		echo "<title>FAQ-Modification</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "Delete.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "delete.php") {
 		echo "<title>FAQ-delete</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "add.php") {
 		echo "<title>FAQ-ajout</title>";

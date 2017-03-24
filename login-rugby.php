@@ -14,20 +14,7 @@
         <body>
         <div id="page-wrapper">
             <!-- Header -->
-            <div id="header">
-            <!-- Logo -->
-                <h1><a id="logo">M2L <em>Ligue de Rugby</em></a></h1>
-            <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="Volley.php">Volley</a></li>
-                        <li><a href="Rugby.php">Rugby</a></li>
-                        <li><a href="Escrime.php">Escrime</a></li>
-                        <li class="current"><a href="login-rugby.php">Connexion</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue de Rugby</h2>
@@ -49,7 +36,7 @@
                 </div>
             </center>
             <!-- FOOTER -->
-            <?php include './includes/Footer.php'; ?>
+            <?php include './includes/footer.php'; ?>
         </div>
     </body>
 </html>

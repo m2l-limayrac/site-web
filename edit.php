@@ -48,9 +48,9 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 
 <form method="post" action="edit.php<?php echo "?id=$id"; ?>">
   <h2>Question</h2>
-  <textarea name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
+  <textarea disabled name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
   <h2>Reponse</h2>
-  <textarea name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
+  <textarea disabled name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
   <button type="submit" class="button" name="submit">Enregistrer</button>
 </form>
 <br>
