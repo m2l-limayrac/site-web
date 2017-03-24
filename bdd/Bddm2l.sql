@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 24 Mars 2017 à 09:56
+-- Généré le :  Ven 24 Mars 2017 à 12:58
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -78,7 +78,7 @@ INSERT INTO `ligue` (`id_ligue`, `lib_lig`) VALUES
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `pseudo` varchar(25) DEFAULT NULL,
-  `mdp` varchar(25) DEFAULT NULL,
+  `mdp` varchar(255) DEFAULT NULL,
   `mail` varchar(25) DEFAULT NULL,
   `id_usertype` int(11) DEFAULT '1',
   `id_ligue` int(11) DEFAULT NULL
@@ -89,29 +89,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `pseudo`, `mdp`, `mail`, `id_usertype`, `id_ligue`) VALUES
-(1, 'clement', '1234', 'clement@m2l.fr', 3, 1),
-(2, 'Alexis', '1234', 'alexis@m2l.fr', 2, 1),
-(3, 'Julien', '1234', 'julien@m2l.fr', 2, 2),
-(4, 'toto', '1235', 'jul@m2l.fr', NULL, 2),
-(5, 'Julien21', '12345', 'julien@m2l.fr', NULL, 2),
-(6, 'jtjtj', 'gtgg', 'tjtj@orangr.fr', NULL, 1),
-(7, 'tjt', 'tjtj', 'tjtj@orangr.fr', NULL, 1),
-(8, 'uuuu', 'uuu', 'ff@gmail.com', NULL, 2),
-(9, 'u(jut', 'jtjtj', 'ff@gmail.com', NULL, 2),
-(10, 'zegeg', 'egegeg', 'tjtj@orangr.fr', NULL, 2),
-(11, 'Xxjulien69xX2000', '12345', 'ff@gmail.com', NULL, 1),
-(12, 'f', 'ggg', 'rhrh@ezgzeg', NULL, 2),
-(13, '(u(', '(u(u(u', 'ff@gmail.com', NULL, 2),
-(14, 'tyjutj', 'tjtj', 'rhrh@ezgzeg', NULL, 2),
-(15, 'tyjutj', 'tjtj', 'rhrh@ezgzeg', NULL, 2),
-(16, '(u(u', '(u(u', 'uiui@orange.fr', NULL, 2),
-(17, 'jju', 'judhh', 'uiui@orange.fr', NULL, 1),
-(18, 'alexs', '12345', 'jefiozjzep@gmail.com', NULL, 1),
-(19, 'alex', '1234', 'laplap@gmail.com', NULL, 3),
-(20, 'petitest', '1234', 'alxeis@mail.fr', 3, 2),
-(21, 'lala', '1234', 'lala@alla.com', 1, 2),
-(22, 'momo', '1234', 'gfezfze@fezfz.com', 1, 1),
-(23, 'lolop', '1234', 'lolop@lolop.fr', 1, 3);
+(28, 'clement', '12c949b30f801f766b634741318a7891b0b667ceca4f320df62c29c0cdf13ea6', 'clement@m2l.fr', 3, 1),
+(29, 'julien', '12c949b30f801f766b634741318a7891b0b667ceca4f320df62c29c0cdf13ea6', 'julien@m2l.fr', 3, 2),
+(30, 'alexis', '12c949b30f801f766b634741318a7891b0b667ceca4f320df62c29c0cdf13ea6', 'alexis@m2l.fr', 3, 3),
+(31, 'michel', '12c949b30f801f766b634741318a7891b0b667ceca4f320df62c29c0cdf13ea6', 'michel@michmich.fr', 2, 1),
+(32, 'didier', '12c949b30f801f766b634741318a7891b0b667ceca4f320df62c29c0cdf13ea6', 'didier@didi.fr', 2, 2),
+(33, 'baptiste', '12c949b30f801f766b634741318a7891b0b667ceca4f320df62c29c0cdf13ea6', 'baptiste@bat.fr', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -183,7 +166,7 @@ ALTER TABLE `ligue`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT pour la table `usertype`
 --

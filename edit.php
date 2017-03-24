@@ -6,11 +6,15 @@ $bdd = mysqli_connect("localhost","root","","m2l");
     }
     else{
       $id = $_GET['id'];
+      
+
       $req1 = mysqli_query($bdd,"SELECT question FROM faq  where id_faq = $id");
       $req2 = mysqli_query($bdd,"SELECT reponse FROM faq  where id_faq = $id");
 
       $row1 = mysqli_fetch_row($req1);
       $row2 = mysqli_fetch_row($req2);
+      
+
     } 
 
     if (isset($_POST['submit']))
@@ -18,7 +22,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 
       if(isset($_POST['question'])  && isset($_POST['reponse']))
         {   
-           
+         
             $question = $_POST['question'];
             $reponse = $_POST['reponse'];
 
@@ -33,9 +37,8 @@ $bdd = mysqli_connect("localhost","root","","m2l");
             else
             {
                 echo "error".$sql."<br>".mysqli_error($bdd);
-            }
+            }                    
         }
-
     }
 ?>
 
@@ -61,6 +64,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
   <br>
 
   <?php include './includes/footer.php'; ?>
+
 </body>
 </html>
 
