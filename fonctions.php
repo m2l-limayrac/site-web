@@ -58,7 +58,7 @@ function connect ($pseudo, $MotDePasse){
 function hachage($mdp){
 
 $hash =  hash('sha256', $mdp);
-return hash('sha256',  10 . $hash);
+    return hash('sha256',  10 . $hash);
 
 }
 

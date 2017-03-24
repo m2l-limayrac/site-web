@@ -1,6 +1,6 @@
 <?php
 session_start();
-	if (basename($_SERVER['PHP_SELF']) == "index.php" || basename($_SERVER['PHP_SELF']) == "edit.php") {
+	if (basename($_SERVER['PHP_SELF']) == "index.php" || basename($_SERVER['PHP_SELF']) == "edit.php" || basename($_SERVER['PHP_SELF']) == "delete.php") {
 		echo '<div id="header">
 				<!-- Logo -->
 					<h1><a id="logo">M2L <em>Maison des ligues</em></a></h1>
