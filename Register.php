@@ -42,7 +42,7 @@
         </div>
         <?php include './includes/footer.php'; ?>
     </center>
-</div>
+</div> 
 </body>
 
 <?php 
