@@ -10,7 +10,9 @@ function connect ($pseudo, $MotDePasse){
             else 
             {
                 // requete SQL
-                $Requete = mysqli_query($mysqli,"SELECT * FROM user WHERE pseudo = '".$pseudo."' AND mdp = '".$MotDePasse."'");
+                $mdp = hachage($MotDePasse);
+                echo "$mdp";
+                $Requete = mysqli_query($mysqli,"SELECT * FROM user WHERE pseudo = '".$pseudo."' AND mdp = '".$mdp."'");
                 //on est senser avoir 1 sin on a 1 alors c qu'on a un resultat
                     if(mysqli_num_rows($Requete) == 0) // si pas de valeur dans la DB
                     {
@@ -20,7 +22,7 @@ function connect ($pseudo, $MotDePasse){
                     }   
                     else 
                     {
-                    
+                   
                         $test = "SELECT * FROM user WHERE pseudo = '$pseudo'";
                         $result = mysqli_query($mysqli, $test);
                         
@@ -57,6 +59,14 @@ function connect ($pseudo, $MotDePasse){
                             }
                     }
             }    
+}
+
+
+function hachage($mdp){
+
+$hash =  hash('sha256', $mdp);
+return hash('sha256',  10 . $hash);
+
 }
 
 

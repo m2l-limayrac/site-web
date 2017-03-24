@@ -23,8 +23,8 @@
                 <span class="custom-dropdown custom-dropdown--white">
                     <select name="choixLigue" class="custom-dropdown__select custom-dropdown__select--white">
                         <option value="Rugby">Ligue de Rugby</option>
-                        <option value="volley">Ligue de volley</option>
-                        <option value="escrime">Ligue d'escrime</option>       
+                        <option value="Volley">Ligue de volley</option>
+                        <option value="Escrime">Ligue d'escrime</option>       
                     </select>
                 </span>
 
@@ -45,7 +45,7 @@
 </body>
 
 <?php 
-
+include 'fonctions.php';
 // on se connecte a Mysql 
 $bdd = mysqli_connect("localhost","root","","m2l");
 // si on ne se connecte pas ou die l'execution
@@ -75,7 +75,8 @@ if (!$bdd) {
             $mdp = $_POST['mdp'];
             $Mail = $_POST['Mail'];
 
-            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdp."','".$Mail."','".$choix."')";
+            $mdpd = hachage($mdp);
+            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdpd."','".$Mail."','".$choix."')";
 
             if(mysqli_query($bdd,$sql))
             {

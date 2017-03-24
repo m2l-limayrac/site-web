@@ -1,5 +1,5 @@
 <?php
- include 'connexion_script.php';
+ include 'fonctions.php';
  if (isset($_POST['connexion'])) {
     $pseudo = htmlentities($_POST['username'], ENT_QUOTES, "ISO-8859-1"); 
     $MotDePasse = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1");
