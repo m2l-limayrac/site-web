@@ -1,5 +1,5 @@
 <?php
- include 'connexion_script.php';
+ include 'fonctions.php';
  if (isset($_POST['connexion'])) {
     $pseudo = htmlentities($_POST['username'], ENT_QUOTES, "ISO-8859-1"); 
     $MotDePasse = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1");
@@ -12,10 +12,10 @@
         <?php include './includes/header.php'; ?>
     </head>
     <body>
+            <?php include './includes/head.php'; ?>
         <div id="page-wrapper">
             <!-- Header -->
             
-            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue d'Escrime</h2>
