@@ -1,12 +1,7 @@
 <!DOCTYPE HTML> 
 <html lang="fr">
 	<head>
-		<title>Volley-ball </title>
-		<link rel="icon" type="image/png" href="images/iconeP.png"/>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/css_custom.css" />
+		<?php include './includes/header.php'; ?>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -162,24 +157,7 @@
 				</div>
 			</section>
 			<!-- CTA -->
-			<section id="cta" class="wrapper style3">
-				<div class="container" id="contact">
-					<header>
-						<h2>Coordonnées de la maison des ligues de Lorraine</h2>
-					</header>
-				</div>
-			</section>
-			<!-- Footer -->
-			<div id="footer">
-				<!-- Icons -->
-				<ul class="icons">
-					<li><a href="https://www.google.fr/maps/place/13+Rue+Jean+Moulin" class="icon fa-map-marker"><span class="label">Adresse</span><p class="icones">13 rue Jean Moulin 54510 TOMBLAINE</p></a></li>
-					<li><a href="tel:+33383188702" class="icon fa-phone"><span class="label">Téléphone</span><p class="icones">03 83 18 87 22</p></a></li>
-					<li><a class="icon fa-fax"><span class="label">FAX</span><p class="icones">03 83 18 87 23</p></a></li>
-					<li><a href="mailto:lucien.gastaldello@m2l.fr" class="icon fa-at"><span class="label">e-mail</span><p class="icones">contact@llvb.fr</p></a></li>
-				</ul>
-			</div>
-		</div>
+			<?php include './includes/Footer.php'; ?>
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
