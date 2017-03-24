@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.5.5.1
 -- http://www.phpmyadmin.net
 --
@@ -35,21 +35,6 @@ CREATE TABLE `faq` (
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
---
--- Contenu de la table `faq`
---
-
-INSERT INTO `faq` (`id_faq`, `question`, `reponse`, `dat_question`, `dat_reponse`, `id_user`) VALUES
-(1, 'fhfhfhrggggggggaaaaaaa', 'rhrhrhrhgggggggggaaaaaaa', '2017-02-01', '2017-02-17', 7),
-(2, 'ouais', 'nondfe""', '2017-02-02', '2017-02-17', 8),
-(3, 'd"Ã©fze', NULL, '2017-03-10', NULL, 5),
-(4, 'Ã§a marche', NULL, '2017-03-10', NULL, 5),
-(5, 'fezfzefzefzezef', NULL, '2017-06-24', NULL, 2),
-(6, 'ceci est ma question', NULL, '2015-06-15', NULL, 2),
-(7, 'azdzdazdaz', NULL, '2017-03-17', NULL, 1),
-(8, 'bonjour ?', NULL, '2017-03-24', NULL, 19);
-
--- --------------------------------------------------------
 
 --
 -- Structure de la table `ligue`
