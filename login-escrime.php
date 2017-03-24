@@ -12,10 +12,10 @@
         <?php include './includes/header.php'; ?>
     </head>
     <body>
+            <?php include './includes/head.php'; ?>
         <div id="page-wrapper">
             <!-- Header -->
             
-            <?php include './includes/head.php'; ?>
             <br></br>
             <center>
                 <h2>Connexion à la ligue d'Escrime</h2>

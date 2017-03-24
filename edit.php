@@ -6,11 +6,15 @@ $bdd = mysqli_connect("localhost","root","","m2l");
     }
     else{
       $id = $_GET['id'];
+      
+
       $req1 = mysqli_query($bdd,"SELECT question FROM faq  where id_faq = $id");
       $req2 = mysqli_query($bdd,"SELECT reponse FROM faq  where id_faq = $id");
 
       $row1 = mysqli_fetch_row($req1);
       $row2 = mysqli_fetch_row($req2);
+      
+
     } 
 
     if (isset($_POST['submit']))
@@ -18,7 +22,7 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 
       if(isset($_POST['question'])  && isset($_POST['reponse']))
         {   
-           
+         
             $question = $_POST['question'];
             $reponse = $_POST['reponse'];
 
@@ -33,9 +37,8 @@ $bdd = mysqli_connect("localhost","root","","m2l");
             else
             {
                 echo "error".$sql."<br>".mysqli_error($bdd);
-            }
+            }                    
         }
-
     }
 ?>
 
@@ -48,9 +51,9 @@ $bdd = mysqli_connect("localhost","root","","m2l");
 
 <form method="post" action="edit.php<?php echo "?id=$id"; ?>">
   <h2>Question</h2>
-  <textarea disabled name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
+  <textarea  name="question" rows="5" cols="40"><?php echo $row1[0];?></textarea>
   <h2>Reponse</h2>
-  <textarea disabled name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
+  <textarea name="reponse" rows="5" cols="40"><?php echo $row2[0];?></textarea>
   <button type="submit" class="button" name="submit">Enregistrer</button>
 </form>
 <br>

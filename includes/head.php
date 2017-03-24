@@ -155,7 +155,19 @@ session_start();
 					</nav>
 				</div>';
 	}elseif (basename($_SERVER['PHP_SELF']) == "register.php") {
-		echo '';
+		echo '<div id="header">
+				<!-- Logo -->
+	                <h1><a id="logo">M2L <em>Enregistrement</em></a></h1>
+	            <!-- Nav -->
+	                <nav id="nav">
+	                    <ul>
+	                        <li><a href="index.php">Accueil</a></li>
+	                        <li><a href="rugby.php">Rugby</a></li>
+	                        <li><a href="volley.php">Volley</a></li>
+	                        <li class="current"><a href="register.php">Inscription</a></li>
+	                    </ul>
+	                </nav>
+                </div>';
 	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
 		echo '<div id="header">
 				<!-- Logo -->

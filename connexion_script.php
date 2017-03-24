@@ -21,7 +21,7 @@ function connect ($pseudo, $MotDePasse){
                     else 
                     {
                     
-                        $test = "SELECT id_ligue FROM user WHERE pseudo = '$pseudo'";
+                        $test = "SELECT * FROM user WHERE pseudo = '$pseudo'";
                         $result = mysqli_query($mysqli, $test);
                         
                             if (mysqli_num_rows($result) > 0) {
@@ -30,18 +30,24 @@ function connect ($pseudo, $MotDePasse){
                                         session_start();
                                         $_SESSION['login'] = $pseudo;
                                         $_SESSION['ligue'] = $row["id_ligue"];
+                                        $_SESSION['id_user'] = $row["id_user"];
+                                        $_SESSION['id_usertype'] = $row["id_usertype"];
                                         header('Location: ./rugby.php');
                                         exit();     
                                     } else if($row["id_ligue"] == 2){
                                         session_start();
                                         $_SESSION['login'] = $pseudo;
                                         $_SESSION['ligue'] = $row["id_ligue"];
+                                        $_SESSION['id_user'] = $row["id_user"];
+                                        $_SESSION['id_usertype'] = $row["id_usertype"];
                                         header('Location: ./volley.php');
                                         exit();     
                                     }else if ($row["id_ligue"] == 3) {
                                        session_start();
                                         $_SESSION['login'] = $pseudo;
                                         $_SESSION['ligue'] = $row["id_ligue"];
+                                        $_SESSION['id_user'] = $row["id_user"];
+                                        $_SESSION['id_usertype'] = $row["id_usertype"];
                                         header('Location: ./escrime.php');
                                         exit();    
                                     }else{

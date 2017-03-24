@@ -14,7 +14,12 @@ $bdd = mysqli_connect("localhost","root","","m2l");
       <!-- Header -->
       <?php include './includes/head.php'; ?>
       <!-- Banner -->
-      <?php if ($_SESSION) { ?>
+      <?php 
+      if ($_SESSION) { 
+          $id_user = $_SESSION['id_user'];
+          $req3=  mysqli_query($bdd,"SELECT id_usertype FROM user where id_user = $id_user");
+          $row3 = mysqli_fetch_row($req3);
+        ?>
       <div class="tableauList">
         <table>
           <thead>
@@ -23,26 +28,42 @@ $bdd = mysqli_connect("localhost","root","","m2l");
                <th>Auteur</th>
                <th>Question</th>
                <th>Reponse</th>
-               <th>Actions</th>
+               <?php if( $row3[0] == 2 || $row3[0] == 3){?>
+                  <th>Actions</th>
+               <?php } ?>
            </tr>
           </thead>
           <tbody>
             <?php 
-              if (!$bdd) {
+              if (!$bdd) 
+              {
                 echo 'Erreur de connection';
-              }else{
-                $req = mysqli_query($bdd,"SELECT faq.id_faq,user.pseudo,faq.question,faq.reponse FROM faq inner join user on faq.id_user = user.id_user WHERE id_ligue = ".$_SESSION['ligue']);
-              } 
+              }
+              else 
+              {
+                  if($row3[0] == 3 )
+                {
+                  $req = mysqli_query($bdd,"SELECT faq.id_faq,user.pseudo,faq.question,faq.reponse FROM faq inner join user on faq.id_user = user.id_user");
+                } 
+                else 
+                {
+                  $req = mysqli_query($bdd,"SELECT faq.id_faq,user.pseudo,faq.question,faq.reponse FROM faq inner join user on faq.id_user = user.id_user WHERE id_ligue = ".$_SESSION['ligue']);
+                } 
+              }
               while($row = mysqli_fetch_row($req)) { ?>
                 <tr>
                   <td><?php echo "".$row[0].""; ?></td>
                   <td><?php echo "".$row[1].""; ?></td>
                   <td><?php echo "".$row[2].""; ?></td>
                   <td><?php echo "".$row[3].""; ?></td>
-                  <td>
-                  <a class="aDuTableau" href="edit.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit"></a>
-                  <a class="aDuTableau" href="delete.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\delete.png" title="Effacer" alt="Effacer" class="icon ic_b_drop"></a>
+                  <?php if( $row3[0] == 2 || $row3[0] == 3){?>
+                    <td>
+                    <a class="aDuTableau" href="edit.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\edit.png" title="Modifier" alt="Modifier" class="icon ic_b_edit"></a>
+                    <a class="aDuTableau" href="delete.php<?php echo "?id=$row[0]"; ?>"><img src="images\tabIco\delete.png" title="Effacer" alt="Effacer" class="icon ic_b_drop"></a>
+                    </td>
+                  <?php } ?>
                 </tr>
+
         <?php 
               }
             }else{
