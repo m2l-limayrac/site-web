@@ -1,3 +1,75 @@
+<?php 
+include 'fonctions.php';
+// on se connecte a Mysql 
+$bdd = mysqli_connect("localhost","root","","m2l");
+// si on ne se connecte pas ou die l'execution
+if (!$bdd) {
+   echo 'Erreur de connection';
+}else{
+
+    if (isset ($_POST['submit']))
+    {
+
+        if( $_POST && isset($_POST['username']) && isset($_POST['mdp'])&& isset($_POST['Mail']) && $_POST['choixLigue'])
+        {   
+            $choix = $_POST['choixLigue'];
+            if ($choix == 'Rugby') {
+                $choix = 1;
+            }
+            if ($choix == 'Volley')
+            {
+                $choix = 2;
+            }
+            if ($choix == 'Escrime')
+            {
+                $choix = 3;
+            }
+
+            $username= $_POST['username'];
+            $mdp = $_POST['mdp'];
+            $Mail = $_POST['Mail'];
+
+            $mdpd = hachage($mdp);
+            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdpd."','".$Mail."','".$choix."')";
+
+            if(mysqli_query($bdd,$sql))
+            {
+                echo "Success";
+            }
+            else
+            {
+                echo "error".$sql."<br>".mysqli_error($bdd);
+                echo "<script>alert(\"Erreur vous n'avez pas ete enregister\")</script>";
+
+            }
+        }
+        if ($choix == 1 )
+        {
+
+            //echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Rugby\")</script>";
+            connect($username, $mdp);
+            //header('Location: ./rugby.php');
+            exit();
+        } 
+        if ($choix == 2) 
+        {
+            // echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Volley\")</script>";
+             connect($username, $mdp);
+            //header('Location: ./volley.php');
+            exit();
+        }
+        if ($choix == 3) 
+        {
+            
+            //echo "<script>alert(\"Vous avez bien ete inscrit a la ligue d'escrime\")</script>";
+            connect($username, $mdp);
+            //header('Location: ./escrime.php');
+            exit();
+        }   
+
+    }
+}
+ ?>
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
@@ -44,74 +116,5 @@
     </center>
 </div> 
 </body>
-
-<?php 
-include 'fonctions.php';
-// on se connecte a Mysql 
-$bdd = mysqli_connect("localhost","root","","m2l");
-// si on ne se connecte pas ou die l'execution
-if (!$bdd) {
-   echo 'Erreur de connection';
-}else{
-
-    if (isset ($_POST['submit']))
-    {
-
-        if( $_POST && isset($_POST['username']) && isset($_POST['mdp'])&& isset($_POST['Mail']) && $_POST['choixLigue'])
-        {   
-            $choix = $_POST['choixLigue'];
-            if ($choix == 'Rugby') {
-                $choix = 1;
-            }
-            if ($choix == 'Volley')
-            {
-                $choix = 2;
-            }
-            if ($choix == 'Escrime')
-            {
-                $choix = 3;
-            }
-
-            $username= $_POST['username'];
-            $mdp = $_POST['mdp'];
-            $Mail = $_POST['Mail'];
-
-            $mdpd = hachage($mdp);
-            $sql ="INSERT INTO user (pseudo,mdp,mail,id_ligue)VALUES ('".$username."','".$mdpd."','".$Mail."','".$choix."')";
-
-            if(mysqli_query($bdd,$sql))
-            {
-                echo "Success";
-            }
-            else
-            {
-                echo "error".$sql."<br>".mysqli_error($bdd);
-                echo "<script>alert(\"Erreur vous n'avais pas ete enregister\")</script>";
-
-            }
-        }
-
-        if ($choix == 1 )
-        {
-            echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Rugby\")</script>";
-            header('Location: ./rugby.php');
-            exit();
-        } 
-        if ($choix == 2) 
-        {
-             echo "<script>alert(\"Vous avez bien ete inscrit a la ligue de Volley\")</script>";
-            header('Location: ./volley.php');
-            exit();
-        }
-        if ($choix == 3) 
-        {
-            
-            echo "<script>alert(\"Vous avez bien ete inscrit a la ligue d'escrime\")</script>";
-            header('Location: ./escrime.php');
-            exit();
-        }   
-
-    }
-}
- ?>
- </div></html>
+ </div>
+ </html>

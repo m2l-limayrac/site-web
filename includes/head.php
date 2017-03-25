@@ -246,7 +246,7 @@ session_start();
 							<li class="current">
 								<a href="list.php">FAQ</a>
 								<ul>
-									<li><a href="#Prés-Escrime">Je sais pas encore quoi mettre</a></li>
+									<li><a href="./add.php">Ajouter une question</a></li>
 								</ul>
 							</li>
 							<li><a href="logout.php">Déconnexion</a></li>

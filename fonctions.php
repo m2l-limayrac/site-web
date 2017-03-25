@@ -11,7 +11,7 @@ function connect ($pseudo, $MotDePasse){
             {
                 // requete SQL
                 $mdp = hachage($MotDePasse);
-                echo "$mdp";
+                //echo "$mdp";
                 $Requete = mysqli_query($mysqli,"SELECT * FROM user WHERE pseudo = '".$pseudo."' AND mdp = '".$mdp."'");
                 //on est senser avoir 1 sin on a 1 alors c qu'on a un resultat
                     if(mysqli_num_rows($Requete) == 0) // si pas de valeur dans la DB
