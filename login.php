@@ -17,18 +17,18 @@
             <?php include './includes/head.php'; ?>            
             <br></br>
             <center>
-                <h2>Connexion à la ligue d'Escrime</h2>
-                    <form method="POST" action="login-escrime.php">
+                <h2>Connexion à votre ligue</h2>
+                    <form method="POST" action="login.php">
                         <div>
-                            <label for="exampleInputEmail1">Nom d'utilisateur spécifique à la ligue d'Escrime</label>
+                            <label for="exampleInputEmail1">Votre nom d'utilisateur</label>
                             <input type="text" class="form-control" name="username" id="username" placeholder="Nom d'utilisateur" required>
                         </div>
                         <div>
-                            <label for="exampleInputPassword1">Mot de passe (ligue d'Escrime)</label>
+                            <label for="exampleInputPassword1">Votre mot de passe</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
                         </div>
                         <br></br>
-                        <button type="submit" class="button alt" name="connexion">Connexion à la ligue d'Escrime</button>
+                        <button type="submit" class="button alt" name="connexion">Connexion à votre ligue</button>
                     </form>
                 <br><br>
                 <div>

@@ -51,8 +51,8 @@ else {
             $date = date("Y-m-d") ;
             $id = mysqli_query($bdd, "SELECT id_user FROM user WHERE pseudo = '".$_SESSION['login']."';");
             $row = mysqli_fetch_row($id);
-            $sql = "INSERT INTO faq(question, dat_question, id_user) VALUES ('$question','$date',$row[0])";
-           //$sql->('id' => $_SESSION["user"]["id_user"]);
+            
+            $sql = "INSERT INTO faq(question, dat_question, id_user) VALUES ('$question','$date',".$row[0].")";
 
             if(mysqli_query($bdd,$sql))
             {

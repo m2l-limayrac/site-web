@@ -9,12 +9,8 @@
 		echo "<title>Ligue d'Escrime</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "register.php") {
 		echo "<title>Inscription</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
-		echo "<title>login-Rugby</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-volley.php") {
-		echo "<title>login-Volley</title>";
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-escrime.php") {
-		echo "<title>login-Escrime</title>";
+	}elseif (basename($_SERVER['PHP_SELF']) == "login.php") {
+		echo "<title>login</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "list.php") {
 		echo "<title>FAQ</title>";
 	}elseif (basename($_SERVER['PHP_SELF']) == "edit.php") {

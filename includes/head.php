@@ -25,9 +25,16 @@ session_start();
 							<li><a href="volley.php">Volley</a></li>
 							<li><a href="escrime.php">Escrime</a></li>';
 							if (isset($_SESSION['login'])) {
-								echo '<li><a href="list.php">FAQ</a></li>
-								<li><a href="logout.php">Déconnexion</a></li>';
-							}
+										echo '<li><a href="list.php">FAQ</a></li>
+										<li><a href="logout.php">Déconnexion</a></li>';
+									}else{
+									 echo '<li>
+											<a href="login.php">Connexion</a>
+											<ul>
+												<li><a href="register.php">Inscription</a></li>
+											</ul>
+									  	</li>';
+									}
 						echo '</ul>
 					</nav>
 				</div>';
@@ -63,7 +70,7 @@ session_start();
 										<li><a href="logout.php">Déconnexion</a></li>';
 									}else{
 									 echo '<li>
-											<a href="login-rugby.php">Connexion</a>
+											<a href="login.php">Connexion</a>
 											<ul>
 												<li><a href="register.php">Inscription</a></li>
 											</ul>
@@ -104,7 +111,7 @@ session_start();
 									<li><a href="logout.php">Déconnexion</a></li>';
 								}else{
 								 echo '<li>
-											<a href="login-volley.php">Connexion</a>
+											<a href="login.php">Connexion</a>
 											<ul>
 												<li><a href="register.php">Inscription</a></li>
 											</ul>
@@ -145,7 +152,7 @@ session_start();
 									<li><a href="logout.php">Déconnexion</a></li>';
 								}else{
 								 echo '<li>
-											<a href="login-escrime.php">Connexion</a>
+											<a href="login.php">Connexion</a>
 											<ul>
 												<li><a href="register.php">Inscription</a></li>
 											</ul>
@@ -169,7 +176,7 @@ session_start();
 	                    </ul>
 	                </nav>
                 </div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-rugby.php") {
+	}elseif (basename($_SERVER['PHP_SELF']) == "login.php") {
 		echo '<div id="header">
 				<!-- Logo -->
 	                <h1><a id="logo">M2L <em>Ligue de Rugby</em></a></h1>
@@ -181,47 +188,7 @@ session_start();
 	                        <li><a href="volley.php">Volley</a></li>
 	                        <li><a href="escrime.php">Escrime</a></li>
 	                        <li class="current">
-								<a href="login-rugby.php">Connexion</a>
-								<ul>
-									<li><a href="register.php">Inscription</a></li>
-								</ul>
-							</li>
-	                    </ul>
-	                </nav>
-                </div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-volley.php") {
-		echo '<div id="header">
-				<!-- Logo -->
-	                <h1><a id="logo">M2L <em>Ligue de Volley</em></a></h1>
-	            <!-- Nav -->
-	                <nav id="nav">
-	                    <ul>
-	                        <li><a href="index.php">Accueil</a></li>
-	                        <li><a href="rugby.php">Rugby</a></li>
-	                        <li><a href="volley.php">Volley</a></li>
-	                        <li class="current">
-								<a href="login-volley.php">Connexion</a>
-								<ul>
-									<li><a href="register.php">Inscription</a></li>
-								</ul>
-							</li>
-							<li><a href="escrime.php">Escrime</a></li>
-	                    </ul>
-	                </nav>
-                </div>';
-	}elseif (basename($_SERVER['PHP_SELF']) == "login-escrime.php") {
-		echo '<div id="header">
-				<!-- Logo -->
-	                <h1><a id="logo">M2L <em>Ligue d\'Escrime</em></a></h1>
-	            <!-- Nav -->
-	                <nav id="nav">
-	                    <ul>
-	                        <li><a href="index.php">Accueil</a></li>
-	                        <li><a href="rugby.php">Rugby</a></li>
-	                        <li><a href="volley.php">Volley</a></li>
-	                        <li><a href="escrime.php">Escrime</a></li>
-	                        <li class="current">
-								<a href="login-escrime.php">Connexion</a>
+								<a href="login.php">Connexion</a>
 								<ul>
 									<li><a href="register.php">Inscription</a></li>
 								</ul>
