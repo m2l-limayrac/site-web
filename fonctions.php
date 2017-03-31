@@ -16,9 +16,7 @@ function connect ($pseudo, $MotDePasse){
                 //on est senser avoir 1 sin on a 1 alors c qu'on a un resultat
                     if(mysqli_num_rows($Requete) == 0) // si pas de valeur dans la DB
                     {
-                    
                       echo "<script>alert(\"Identifiant ou Mot de Passe Incorrect\")</script>"; 
-
                     }   
                     else 
                     {
@@ -27,37 +25,25 @@ function connect ($pseudo, $MotDePasse){
                         
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)){
+                                    session_start();
+                                    $_SESSION['login'] = $pseudo;
+                                    $_SESSION['ligue'] = $row["id_ligue"];
+                                    $_SESSION['id_user'] = $row["id_user"];
+                                    $_SESSION['id_usertype'] = $row["id_usertype"];
                                     if($row["id_ligue"] == 1){
-                                        session_start();
-                                        $_SESSION['login'] = $pseudo;
-                                        $_SESSION['ligue'] = $row["id_ligue"];
-                                        $_SESSION['id_user'] = $row["id_user"];
-                                        $_SESSION['id_usertype'] = $row["id_usertype"];
-                                        header('Location: ./rugby.php');
-                                        exit();     
+                                        header('Location: ./rugby.php?id=login');   
                                     } else if($row["id_ligue"] == 2){
-                                        session_start();
-                                        $_SESSION['login'] = $pseudo;
-                                        $_SESSION['ligue'] = $row["id_ligue"];
-                                        $_SESSION['id_user'] = $row["id_user"];
-                                        $_SESSION['id_usertype'] = $row["id_usertype"];
-                                        header('Location: ./volley.php');
-                                        exit();     
+                                        header('Location: ./volley.php?id=login');    
                                     }else if ($row["id_ligue"] == 3) {
-                                       session_start();
-                                        $_SESSION['login'] = $pseudo;
-                                        $_SESSION['ligue'] = $row["id_ligue"];
-                                        $_SESSION['id_user'] = $row["id_user"];
-                                        $_SESSION['id_usertype'] = $row["id_usertype"];
-                                        header('Location: ./escrime.php');
-                                        exit();    
+                                        session_start();
+                                        header('Location: ./escrime.php?id=login');   
                                     }else{
-                                    echo "<script>alert(\"Vous tentez de vous connecter a la mauvaise ligue!!\")</script>";
-                                }
+                                        echo "<script>alert(\"Vous tentez de vous connecter a la mauvaise ligue!!\")</script>";
+                                    }
                                 }                                
                             }
                     }
-            }    
+            }   
 }
 
 

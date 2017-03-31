@@ -1,9 +1,17 @@
+<?php
+	$log = $_GET['id'];
+?>
 <!DOCTYPE HTML> 
 <html lang="fr">
 	<head>
 		<?php include './includes/header.php'; ?>
 	</head>
 	<body>
+	<?php 
+		if($log == "login"){
+			echo "<script type='application/javascript'> alert('Vous etes bien connecté a la ligue de Volley'); </script>";
+		}
+	 ?>
 		<div id="page-wrapper">
 			<!-- Header -->
 			<?php include './includes/head.php'; ?>
