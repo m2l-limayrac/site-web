@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.5.5.1
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 24 Mars 2017 à 12:58
+-- Généré le :  Ven 31 Mars 2017 à 09:49
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -35,6 +35,7 @@ CREATE TABLE `faq` (
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
+-- --------------------------------------------------------
 
 --
 -- Structure de la table `ligue`
@@ -90,7 +91,7 @@ INSERT INTO `user` (`id_user`, `pseudo`, `mdp`, `mail`, `id_usertype`, `id_ligue
 CREATE TABLE `usertype` (
   `id_usertype` int(11) NOT NULL,
   `lib_usertype` varchar(25) DEFAULT NULL,
-  `description` varchar(50) CHARACTER SET latin1 NOT NULL
+  `description` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
@@ -141,7 +142,7 @@ ALTER TABLE `usertype`
 -- AUTO_INCREMENT pour la table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `ligue`
 --
@@ -151,7 +152,7 @@ ALTER TABLE `ligue`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT pour la table `usertype`
 --
