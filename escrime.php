@@ -1,5 +1,7 @@
 <?php
-	$log = $_GET['id'];
+	if($_GET){
+		$log = $_GET['id'];
+	}
 ?>
 <!DOCTYPE HTML>
 <html lang="fr">
@@ -8,9 +10,11 @@
 	</head>
 	<body>
 		<?php 
+			if($_GET){
 			if($log == "login"){
 				echo "<script type='application/javascript'> alert(\"Vous etes bien connecté a la ligue d'Escrime\"); </script>";
 			}
+		}
  		?>
 		<div id="page-wrapper">
 			<!-- Header -->
